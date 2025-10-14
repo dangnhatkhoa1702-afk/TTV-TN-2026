@@ -587,7 +587,7 @@
 </section>
 
 <style>
-  /* ========= Career Fair Section (scoped) ========= */
+  /* ========= Career Fair Section ========= */
   .career-fair {
     --cf-primary: #0d6efd;
     --cf-primary-dark: #004bb5;
@@ -667,7 +667,9 @@
   }
 
   .career-fair .cta-wrapper {
-    text-align: center; /* đưa nút vào giữa card */
+    text-align: center; /* center nút trên desktop */
+    display: flex;
+    justify-content: center; /* luôn giữ giữa card */
   }
 
   .career-fair .btn-cta {
@@ -692,11 +694,20 @@
     .career-fair { padding: 30px 16px 10px; }
     .career-fair .career-title { font-size: 1.8rem; margin-bottom: 20px; }
     .career-fair .fair-card { padding: 24px; }
-    .career-fair .sub-info { font-size: 1rem; text-align: left; }
-    .career-fair .btn-cta { width: 100%; text-align: center; }
+    .career-fair .sub-info {
+      font-size: 1rem;
+      text-align: center; /* ✅ giữ text giữa card */
+    }
+    .career-fair .cta-wrapper {
+      display: flex;
+      justify-content: center; /* ✅ giữ nút CTA giữa card */
+    }
+    .career-fair .btn-cta {
+      width: auto; /* nếu muốn nút full width thì đổi thành 100% */
+      text-align: center;
+    }
   }
 </style>
-
 
   
 <!-- ================= SECTION: CHÂN DUNG ỨNG VIÊN ================= -->
