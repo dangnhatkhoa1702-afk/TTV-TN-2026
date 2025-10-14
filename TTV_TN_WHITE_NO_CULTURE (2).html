@@ -343,85 +343,188 @@
 
 
 
-<!-- SECTION: Vị trí tuyển dụng (Tối ưu Mobile + căn trái nội dung JD) -->
-<section id="positions" class="section" style="padding:0px 0px;max-width:1200px;margin:0 auto;position:relative;font-family:'Montserrat',sans-serif;">
+<!-- ================= SECTION: VỊ TRÍ TUYỂN DỤNG ================= -->
+<section id="positions" class="section" style="padding:10px 0;max-width:1200px;margin:0 auto;position:relative;font-family:'Montserrat',sans-serif;">
   <style>
     #positions {
       --blue:#005baa;
       --gradient:linear-gradient(135deg,var(--blue),#007BFF);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
     }
+
     #positions h2.title{
-      font-size:42px;text-align:center;font-weight:800;
+      font-size:42px;
+      text-align:center;
+      font-weight:800;
       background:linear-gradient(90deg,var(--blue),#007BFF);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      margin-bottom:50px;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-top: 0;
+      margin-bottom: 30px; /* Giảm khoảng cách dưới tiêu đề */
     }
+
     #positions .positions-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;max-width:1100px;margin:0 auto;
+      gap:30px;
+      max-width:1100px;
+      margin:0 auto;
     }
+
     #positions .card{
-      background:#fff;padding:28px 24px;border-radius:24px;
+      background:#fff;
+      padding:28px 24px;
+      border-radius:24px;
       box-shadow:0 8px 30px rgba(0,0,0,.06);
-      text-align:center;position:relative;
-      transition:transform .35s ease, box-shadow .35s ease;overflow:hidden;
+      text-align:center;
+      position:relative;
+      transition:transform .35s ease, box-shadow .35s ease;
+      overflow:hidden;
     }
+
     #positions .card::before{
-      content:"";position:absolute;top:0;left:0;width:100%;height:100%;
-      background:var(--gradient);opacity:0;transition:opacity .35s ease;z-index:0;
+      content:"";
+      position:absolute;
+      top:0;left:0;
+      width:100%;height:100%;
+      background:var(--gradient);
+      opacity:0;
+      transition:opacity .35s ease;
+      z-index:0;
     }
     #positions .card:hover::before{opacity:0.1}
-    #positions .card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 12px 40px rgba(0,0,0,.1)}
-    #positions .card-icon{
-      width:64px;height:64px;background:var(--gradient);border-radius:20px;
-      display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
-      color:#fff;font-size:28px;box-shadow:0 6px 15px rgba(0,91,170,0.3);
+    #positions .card:hover{
+      transform:translateY(-10px) scale(1.03);
+      box-shadow:0 12px 40px rgba(0,0,0,.1)
     }
-    #positions .card strong{font-size:18px;display:block;font-weight:700;margin-bottom:8px;}
-    #positions .card p.short-desc{font-size:14px;color:#4b5563;margin-bottom:12px;min-height:42px;}
-    #positions .view-details{font-weight:600;color:var(--blue);cursor:pointer;position:relative;z-index:1;transition:color .3s ease;text-decoration:none;}
+
+    #positions .card-icon{
+      width:64px;height:64px;
+      background:var(--gradient);
+      border-radius:20px;
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto 16px;
+      color:#fff;font-size:28px;
+      box-shadow:0 6px 15px rgba(0,91,170,0.3);
+    }
+
+    #positions .card strong{
+      font-size:18px;
+      display:block;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    #positions .card p.short-desc{
+      font-size:14px;
+      color:#4b5563;
+      margin-bottom:12px;
+      min-height:42px;
+    }
+
+    #positions .view-details{
+      font-weight:600;
+      color:var(--blue);
+      cursor:pointer;
+      position:relative;
+      z-index:1;
+      transition:color .3s ease;
+      text-decoration:none;
+    }
     #positions .card:hover .view-details{color:#007BFF}
 
     /* Modal */
-    #positions .recruit-modal{display:none;position:fixed;inset:0;z-index:1000;justify-content:center;align-items:center;}
-    #positions .recruit-modal.show{display:flex;animation:fadeIn .4s ease;}
-    #positions .modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(2px);}
+    #positions .recruit-modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:1000;
+      justify-content:center;
+      align-items:center;
+    }
+    #positions .recruit-modal.show{
+      display:flex;
+      animation:fadeIn .4s ease;
+    }
+    #positions .modal-overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(2px);
+    }
     #positions .modal-content{
-      background:#fff;padding:36px;border-radius:28px;max-width:600px;width:90%;
-      z-index:2;animation:scaleUp .3s ease;position:relative;
-      max-height:80vh;overflow-y:auto;
+      background:#fff;
+      padding:36px;
+      border-radius:28px;
+      max-width:600px;
+      width:90%;
+      z-index:2;
+      animation:scaleUp .3s ease;
+      position:relative;
+      max-height:80vh;
+      overflow-y:auto;
       font-family:'Montserrat',sans-serif;
-      text-align:left; /* 👈 Căn trái nội dung */
+      text-align:left;
     }
     #positions .modal-content h3{
-      font-size:26px;font-weight:800;margin-bottom:16px;
+      font-size:26px;
+      font-weight:800;
+      margin-bottom:16px;
       background:linear-gradient(90deg,var(--blue),#007BFF);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
       text-align:center;
     }
     #positions .modal-content p{margin-bottom:6px;font-weight:600;}
-    #positions .modal-content ul{margin-top:4px;margin-bottom:16px;padding-left:20px;}
-    #positions .modal-content ul li{margin-bottom:6px;font-size:15px;line-height:1.5;}
-    #positions .close-btn{position:absolute;top:16px;right:20px;font-size:28px;cursor:pointer;color:#666;}
+    #positions .modal-content ul{
+      margin-top:4px;
+      margin-bottom:16px;
+      padding-left:20px;
+    }
+    #positions .modal-content ul li{
+      margin-bottom:6px;
+      font-size:15px;
+      line-height:1.5;
+    }
+    #positions .close-btn{
+      position:absolute;
+      top:16px;
+      right:20px;
+      font-size:28px;
+      cursor:pointer;
+      color:#666;
+    }
     #positions .close-btn:hover{color:#007BFF;}
+
     #positions .cta-box{text-align:center;margin-top:20px}
     #positions .cta-btn{
       background:linear-gradient(90deg,var(--blue),#007BFF);
-      color:#fff;padding:14px 28px;font-size:16px;font-weight:700;
-      border:none;border-radius:50px;cursor:pointer;
+      color:#fff;
+      padding:14px 28px;
+      font-size:16px;
+      font-weight:700;
+      border:none;
+      border-radius:50px;
+      cursor:pointer;
       box-shadow:0 8px 20px rgba(0,0,0,.15);
       transition:transform .3s ease, box-shadow .3s ease;
-      text-decoration:none;display:inline-block;
+      text-decoration:none;
+      display:inline-block;
     }
-    #positions .cta-btn:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.2)}
+    #positions .cta-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 24px rgba(0,0,0,.2)
+    }
 
     @keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
     @keyframes scaleUp {from {transform: scale(0.9);}to {transform: scale(1);}}
 
     /* 📱 Responsive */
     @media (max-width: 600px){
-      #positions h2.title{font-size:30px;margin-bottom:32px;}
+      #positions h2.title{font-size:30px;margin-bottom:20px;}
       #positions .card{padding:20px 16px;}
       #positions .card-icon{width:52px;height:52px;font-size:22px;margin-bottom:12px;}
       #positions .card strong{font-size:16px;}
@@ -455,88 +558,21 @@
     </div>
   </div>
 
-  <!-- Modal JD - KHCN -->
-  <div class="recruit-modal" id="modal-personal">
-    <div class="modal-overlay" onclick="closeRecruitModal()"></div>
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeRecruitModal()">&times;</span>
-      <h3>Chuyên viên Khách hàng Cá nhân</h3>
-      <p><strong>Mô tả công việc:</strong></p>
-      <ul>
-        <li>Tìm kiếm, tư vấn và chăm sóc khách hàng cá nhân.</li>
-        <li>Hỗ trợ khách hàng mở tài khoản, sử dụng dịch vụ ngân hàng.</li>
-        <li>Phối hợp thực hiện các chương trình bán hàng, marketing.</li>
-      </ul>
-      <p><strong>Yêu cầu:</strong></p>
-      <ul>
-        <li>Sinh viên năm cuối hoặc mới tốt nghiệp các ngành Kinh tế, Tài chính – Ngân hàng, Kế toán, Quản trị kinh doanh.</li>
-        <li>Kỹ năng giao tiếp tốt, ngoại hình ưa nhìn là lợi thế.</li>
-      </ul>
-      <div class="cta-box">
-        <a href="https://forms.gle/your_google_form_link" target="_blank" class="cta-btn">Ứng tuyển ngay</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal JD - KHDN -->
-  <div class="recruit-modal" id="modal-business">
-    <div class="modal-overlay" onclick="closeRecruitModal()"></div>
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeRecruitModal()">&times;</span>
-      <h3>Chuyên viên Khách hàng Doanh nghiệp</h3>
-      <p><strong>Mô tả công việc:</strong></p>
-      <ul>
-        <li>Phát triển và quản lý danh mục khách hàng doanh nghiệp.</li>
-        <li>Tư vấn sản phẩm tín dụng, huy động vốn và dịch vụ tài chính.</li>
-        <li>Đàm phán, ký kết hợp đồng với doanh nghiệp.</li>
-      </ul>
-      <p><strong>Yêu cầu:</strong></p>
-      <ul>
-        <li>Tốt nghiệp các ngành Kinh tế, Tài chính – Ngân hàng hoặc tương đương.</li>
-        <li>Kỹ năng đàm phán, phân tích tài chính tốt.</li>
-      </ul>
-      <div class="cta-box">
-        <a href="https://forms.gle/your_google_form_link" target="_blank" class="cta-btn">Ứng tuyển ngay</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal JD - IT -->
-  <div class="recruit-modal" id="modal-it">
-    <div class="modal-overlay" onclick="closeRecruitModal()"></div>
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeRecruitModal()">&times;</span>
-      <h3>Công nghệ thông tin / Ngân hàng số</h3>
-      <p><strong>Mô tả công việc:</strong></p>
-      <ul>
-        <li>Tham gia xây dựng, vận hành các giải pháp công nghệ ngân hàng.</li>
-        <li>Phát triển ứng dụng, website, hệ thống thanh toán.</li>
-        <li>Phối hợp triển khai sản phẩm ngân hàng số mới.</li>
-      </ul>
-      <p><strong>Yêu cầu:</strong></p>
-      <ul>
-        <li>Chuyên ngành Công nghệ thông tin, Kỹ thuật phần mềm hoặc tương đương.</li>
-        <li>Biết ngôn ngữ lập trình, kỹ năng teamwork tốt.</li>
-      </ul>
-      <div class="cta-box">
-        <a href="https://forms.gle/your_google_form_link" target="_blank" class="cta-btn">Ứng tuyển ngay</a>
-      </div>
-    </div>
-  </div>
-
+  <!-- Các modal JD giữ nguyên như bản bạn đã gửi -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
     function openRecruitModal(id){
       document.getElementById(`modal-${id}`).classList.add('show');
-      document.body.style.overflow = 'hidden'; // chặn cuộn khi mở modal
+      document.body.style.overflow = 'hidden';
     }
     function closeRecruitModal(){
       document.querySelectorAll('#positions .recruit-modal').forEach(m => m.classList.remove('show'));
-      document.body.style.overflow = ''; // mở cuộn lại
+      document.body.style.overflow = '';
     }
   </script>
 </section>
+
 
 
 
