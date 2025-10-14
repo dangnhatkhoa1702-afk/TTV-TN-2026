@@ -559,9 +559,9 @@
 <!-- SECTION: NGÀY HỘI TUYỂN DỤNG -->
 <section class="section career-fair" id="career-fair">
   <div class="fair-card highlight">
- <h2 class="career-title">
-  THAM GIA <br> NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG
-</h2>
+    <h2 class="career-title">
+      THAM GIA <br> NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG
+    </h2>
 
     <div class="sub-info">
       📍 <strong>34 Trường Đại học trên toàn quốc</strong><br>
@@ -585,139 +585,127 @@
 
 <style>
   /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
-  /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
-.career-fair {
-  padding: 70px 20px;
-  background: #ffffff; /* ✅ Nền trắng */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.career-fair .career-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #0d6efd; /* MÀU XANH */
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-/* Xóa hiệu ứng vòng tròn nền xanh, hoặc giữ lại nếu bạn vẫn muốn */
-.career-fair::before,
-.career-fair::after {
-  display: none;
-}
-
-.career-fair .fair-card {
-  background: white;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 36px 32px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  border-left: 6px solid #0d6efd;
-  position: relative;
-  animation: fadeUp 0.8s ease forwards;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.career-fair .tagline {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 24px;
-}
-
-.career-fair .sub-info {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0d6efd;
-  margin-bottom: 24px;
-  line-height: 1.6;
-  background: #eaf3ff;
-  padding: 14px 18px;
-  border-radius: 12px;
-  display: inline-block;
-}
-
-.career-fair .fair-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 28px;
-  text-align: left;
-}
-
-.career-fair .fair-card ul li {
-  font-size: 1rem;
-  margin-bottom: 14px;
-  padding-left: 40px;
-  position: relative;
-  line-height: 1.6;
-  font-weight: 500;
-  transition: transform 0.2s ease;
-}
-
-.career-fair .fair-card ul li:hover {
-  transform: translateX(5px);
-}
-
-.career-fair .fair-card ul li .icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.3rem;
-}
-
-.career-fair .fair-card .date {
-  font-weight: 600;
-  color: #0d6efd;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.career-fair .btn-cta {
-  display: inline-block;
-  background: #0d6efd;
-  color: white;
-  padding: 16px 30px;
-  border-radius: 50px;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.career-fair .btn-cta:hover {
-  background: #004bb5;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
   .career-fair {
-    padding: 50px 16px;
+    padding: 40px 20px 10px 20px; /* ⬅️ giảm top 40px, bottom 10px */
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
-  .career-fair .fair-card {
-    padding: 24px;
-  }
+
   .career-fair .career-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0d6efd;
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
-  .career-fair .tagline {
-    font-size: 1rem;
+
+  .career-fair::before,
+  .career-fair::after {
+    display: none;
   }
-  .career-fair .btn-cta {
-    width: 100%;
+
+  .career-fair .fair-card {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 36px 32px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left: 6px solid #0d6efd;
+    position: relative;
+    animation: fadeUp 0.8s ease forwards;
   }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .career-fair .sub-info {
-    font-size: 1rem;
-    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    background: #eaf3ff;
+    padding: 14px 18px;
+    border-radius: 12px;
+    display: inline-block;
   }
-}
+
+  .career-fair .fair-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .career-fair .fair-card ul li {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    padding-left: 40px;
+    position: relative;
+    line-height: 1.6;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+  }
+
+  .career-fair .fair-card ul li:hover {
+    transform: translateX(5px);
+  }
+
+  .career-fair .fair-card ul li .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3rem;
+  }
+
+  .career-fair .fair-card .date {
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .career-fair .btn-cta {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .career-fair .btn-cta:hover {
+    background: #004bb5;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .career-fair {
+      padding: 30px 16px 10px 16px; /* ⬅️ mobile top giảm còn 30px */
+    }
+    .career-fair .fair-card {
+      padding: 24px;
+    }
+    .career-fair .career-title {
+      font-size: 1.8rem;
+    }
+    .career-fair .btn-cta {
+      width: 100%;
+    }
+    .career-fair .sub-info {
+      font-size: 1rem;
+      display: block;
+    }
+  }
 </style>
 
 <!-- ================= SECTION: CHÂN DUNG ỨNG VIÊN ================= -->
@@ -753,7 +741,7 @@
 <style>
   #candidate {
     background:#ffffff;
-    padding: 100px 20px;
+    padding: 40px 20px 10px 20px; /* ✅ giảm khoảng cách giống section trên */
     font-family: 'Roboto', sans-serif;
   }
 
@@ -780,7 +768,6 @@
     box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
   }
 
-  /* 👇 Luôn căn trái */
   #candidate .candidate-content {
     text-align: left;
   }
@@ -791,7 +778,7 @@
     font-size: 32px;
     color: #005baa;
     margin-bottom: 16px;
-    text-align: left; /* Căn trái cả trên mobile */
+    text-align: left;
   }
 
   #candidate .candidate-list {
@@ -852,7 +839,6 @@
       gap: 24px;
     }
 
-    /* Ảnh xuống dưới, chữ lên trên — chữ vẫn căn trái */
     #candidate .candidate-content {
       order: 1;
       text-align: left;
@@ -863,13 +849,13 @@
     }
 
     #candidate .candidate-content h2 {
-      text-align: left; /* 👈 giữ trái */
+      text-align: left;
     }
   }
 
   @media (max-width: 480px) {
     #candidate {
-      padding: 60px 16px;
+      padding: 30px 16px 10px 16px; /* ✅ mobile top giảm còn 30px */
     }
 
     #candidate .candidate-content h2 {
@@ -889,16 +875,14 @@
 
 
 
-
-
-  <!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
+<!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <section id="benefits" style="
   background: #ffffff;
-  padding: 60px 20px;
+  padding: 40px 20px 10px 20px; /* ✅ giảm khoảng cách giống các section khác */
   text-align: center;
   font-family: 'Montserrat', 'Roboto', sans-serif;
 ">
@@ -912,16 +896,9 @@
     ">
       Quyền lợi khi tham gia chương trình
     </h2>
-    <p style="
-      font-size: 18px;
-      color: #444;
-      margin-bottom: 30px;
-      line-height: 1.5;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    ">
-  
+
+    <!-- ✨ Đã xóa đoạn mô tả ở đây -->
+
     <div class="benefits-image-wrapper" style="display:flex;justify-content:center;">
       <img 
         src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/benefits.jpg" 
@@ -936,17 +913,12 @@
   /* Responsive */
   @media (max-width: 768px) {
     #benefits {
-      padding: 40px 16px;
+      padding: 30px 16px 10px 16px; /* ✅ giảm padding mobile */
     }
 
     #benefits h2 {
       font-size: 26px;
       margin-bottom: 16px;
-    }
-
-    #benefits p {
-      font-size: 16px;
-      margin-bottom: 20px;
     }
 
     .benefits-image-wrapper img {
@@ -957,8 +929,6 @@
   }
 </style>
 
-    
-    
 <!-- ================= SECTION: GIẢI THƯỞNG NỔI BẬT ================= -->
 <section id="achievements" style="padding:10px 0; background:white; font-family:'Montera','Roboto',sans-serif;">
   <div class="container" style="max-width:1200px; margin:0 auto;">
