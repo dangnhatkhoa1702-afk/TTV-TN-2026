@@ -584,159 +584,145 @@
 
 <style>
   /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
+  /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
+.career-fair {
+  padding: 70px 20px;
+  background: #ffffff; /* ✅ Nền trắng */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.career-fair .career-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0d6efd; /* MÀU XANH */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Xóa hiệu ứng vòng tròn nền xanh, hoặc giữ lại nếu bạn vẫn muốn */
+.career-fair::before,
+.career-fair::after {
+  display: none;
+}
+
+.career-fair .fair-card {
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-left: 6px solid #0d6efd;
+  position: relative;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.career-fair .tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.career-fair .sub-info {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  background: #eaf3ff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.career-fair .fair-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.career-fair .fair-card ul li {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  padding-left: 40px;
+  position: relative;
+  line-height: 1.6;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.career-fair .fair-card ul li:hover {
+  transform: translateX(5px);
+}
+
+.career-fair .fair-card ul li .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3rem;
+}
+
+.career-fair .fair-card .date {
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.career-fair .btn-cta {
+  display: inline-block;
+  background: #0d6efd;
+  color: white;
+  padding: 16px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.career-fair .btn-cta:hover {
+  background: #004bb5;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
   .career-fair {
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #eaf6ff 0%, #cde8ff 50%, #b0d8ff 100%);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    padding: 50px 16px;
   }
-
-  .career-fair .career-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #0d6efd; /* MÀU XANH */
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-
-  .career-fair::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    right: -80px;
-    width: 200px;
-    height: 200px;
-    background: rgba(13,110,253,0.15);
-    border-radius: 50%;
-  }
-  .career-fair::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    left: -60px;
-    width: 160px;
-    height: 160px;
-    background: rgba(13,110,253,0.1);
-    border-radius: 50%;
-  }
-
   .career-fair .fair-card {
-    background: white;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 36px 32px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border-left: 6px solid #0d6efd;
-    position: relative;
-    animation: fadeUp 0.8s ease forwards;
+    padding: 24px;
   }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+  .career-fair .career-title {
+    font-size: 1.8rem;
   }
-
   .career-fair .tagline {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 24px;
-  }
-
-  .career-fair .sub-info {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #0d6efd;
-    margin-bottom: 24px;
-    line-height: 1.6;
-    background: #eaf3ff;
-    padding: 14px 18px;
-    border-radius: 12px;
-    display: inline-block;
-  }
-
-  .career-fair .fair-card ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 28px;
-    text-align: left;
-  }
-
-  .career-fair .fair-card ul li {
     font-size: 1rem;
-    margin-bottom: 14px;
-    padding-left: 40px;
-    position: relative;
-    line-height: 1.6;
-    font-weight: 500;
-    transition: transform 0.2s ease;
   }
-
-  .career-fair .fair-card ul li:hover {
-    transform: translateX(5px);
-  }
-
-  .career-fair .fair-card ul li .icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.3rem;
-  }
-
-  .career-fair .fair-card .date {
-    font-weight: 600;
-    color: #0d6efd;
-    margin-bottom: 24px;
-    text-align: center;
-  }
-
   .career-fair .btn-cta {
-    display: inline-block;
-    background: #0d6efd;
-    color: white;
-    padding: 16px 30px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
+    width: 100%;
+  }
+  .career-fair .sub-info {
     font-size: 1rem;
-    transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
   }
-
-  .career-fair .btn-cta:hover {
-    background: #004bb5;
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 768px) {
-    .career-fair {
-      padding: 50px 16px;
-    }
-    .career-fair .fair-card {
-      padding: 24px;
-    }
-    .career-fair .career-title {
-      font-size: 1.8rem;
-    }
-    .career-fair .tagline {
-      font-size: 1rem;
-    }
-    .career-fair .btn-cta {
-      width: 100%;
-    }
-    .career-fair .sub-info {
-      font-size: 1rem;
-      display: block;
-    }
-  }
+}
 </style>
 
 <!-- ================= SECTION: CHÂN DUNG ỨNG VIÊN ================= -->
 <section id="candidate">
   <div class="candidate-container">
-    <!-- LEFT: Image (hiển thị bên trái trên desktop, xuống dưới trên mobile) -->
+    <!-- LEFT: Image -->
     <div class="candidate-image">
       <img 
         src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/OPTION-2.1.jpg" 
@@ -765,14 +751,15 @@
 <!-- ================= CSS ================= -->
 <style>
   #candidate {
-    background:#ffffff;padding: 100px 20px;
+    background:#ffffff;
+    padding: 100px 20px;
     font-family: 'Roboto', sans-serif;
   }
 
   /* Layout Desktop */
   #candidate .candidate-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* ảnh trái - chữ phải */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
@@ -792,6 +779,7 @@
     box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
   }
 
+  /* 👇 Luôn căn trái */
   #candidate .candidate-content {
     text-align: left;
   }
@@ -802,6 +790,7 @@
     font-size: 32px;
     color: #005baa;
     margin-bottom: 16px;
+    text-align: left; /* Căn trái cả trên mobile */
   }
 
   #candidate .candidate-list {
@@ -862,10 +851,10 @@
       gap: 24px;
     }
 
-    /* 👇 Ảnh xuống dưới, chữ lên trên */
+    /* Ảnh xuống dưới, chữ lên trên — chữ vẫn căn trái */
     #candidate .candidate-content {
       order: 1;
-      text-align: center;
+      text-align: left;
     }
 
     #candidate .candidate-image {
@@ -873,7 +862,7 @@
     }
 
     #candidate .candidate-content h2 {
-      text-align: center;
+      text-align: left; /* 👈 giữ trái */
     }
   }
 
@@ -896,7 +885,6 @@
     }
   }
 </style>
-
 
 
 
