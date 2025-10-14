@@ -477,7 +477,7 @@
   <div class="roadmap-wrapper">
     <div class="roadmap-bg">
       <img 
-        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/lo-trinh-ung-tuyen.gif" 
+        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/lo%20trinh%20ung%20tuyen.jpg" 
         alt="Lộ trình ứng tuyển" 
         class="roadmap-img"
       >
@@ -856,16 +856,16 @@
 
 
 
-   <!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
+  <!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <section id="benefits" style="
   background: #ffffff;
-  padding: 100px 20px;
+  padding: 60px 20px;
   text-align: center;
-  font-family: 'Montera', 'Roboto', sans-serif;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
 ">
   <div class="container" style="max-width:1100px;margin:0 auto;">
     <h2 style="
@@ -880,7 +880,7 @@
     <p style="
       font-size: 18px;
       color: #444;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       line-height: 1.5;
       max-width: 800px;
       margin-left: auto;
@@ -891,59 +891,40 @@
       <strong>“Doanh nghiệp quan tâm chăm sóc nhân viên tuyệt vời nhất”</strong>.
     </p>
 
-    <div class="benefits-wrapper" style="overflow:hidden;">
-      <div class="benefits-carousel" id="benefitsCarousel" style="
-        display: flex;
-        gap: 16px;
-        width: max-content;
-        animation: scrollLoop 35s linear infinite;
-      ">
-        <div class="benefit-slide">💸 Chi phí hỗ trợ từ 10 triệu đồng</div>
-        <div class="benefit-slide">👩‍🏫 Mentor giàu kinh nghiệm đồng hành xuyên suốt</div>
-        <div class="benefit-slide">🎯 Cơ hội trở thành nhân viên chính thức</div>
-        <div class="benefit-slide">🚀 Quy hoạch cán bộ quản lý sau 3 năm (hiệu quả tốt)</div>
-        <div class="benefit-slide">📜 Giấy chứng nhận hoàn thành chương trình</div>
-
-        <!-- Duplicate để tạo vòng xoay mượt -->
-        <div class="benefit-slide">💸 Chi phí hỗ trợ từ 10 triệu đồng</div>
-        <div class="benefit-slide">👩‍🏫 Mentor giàu kinh nghiệm đồng hành xuyên suốt</div>
-        <div class="benefit-slide">🎯 Cơ hội trở thành nhân viên chính thức</div>
-        <div class="benefit-slide">🚀 Quy hoạch cán bộ quản lý sau 3 năm (hiệu quả tốt)</div>
-        <div class="benefit-slide">📜 Giấy chứng nhận hoàn thành chương trình</div>
-      </div>
+    <div class="benefits-image-wrapper" style="display:flex;justify-content:center;">
+      <img 
+        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/benefits.jpg" 
+        alt="Quyền lợi khi tham gia chương trình"
+        style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06);"
+      >
     </div>
   </div>
 </section>
 
 <style>
-  .benefit-slide {
-    flex: 0 0 300px;
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 24px;
-    color: #005baa;
-    font-weight: 600;
-    text-align: left;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-  }
-  .benefit-slide:hover {
-    transform: translateY(-6px);
-  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    #benefits {
+      padding: 40px 16px;
+    }
 
-  /* Hiệu ứng xoay vòng liên tục */
-  @keyframes scrollLoop {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+    #benefits h2 {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
 
-  #benefitsCarousel::-webkit-scrollbar {
-    display: none;
+    #benefits p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .benefits-image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
   }
 </style>
-
-
-
 
     
     
