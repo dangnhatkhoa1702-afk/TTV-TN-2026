@@ -472,6 +472,7 @@
 
 
 
+<!-- SECTION: LỘ TRÌNH ỨNG TUYỂN -->
 <section class="section" id="apply-journey" aria-label="Lộ trình ứng tuyển">
   <h2 class="title">LỘ TRÌNH ỨNG TUYỂN</h2>
   <div class="roadmap-wrapper">
@@ -490,15 +491,22 @@
     --blue: #0072BC;
     --purple: #5E5ADB;
     --gold: #FFC20E;
-    --bg-light-blue: #FFFFFF; /* Xanh nhẹ nền */
+    --bg-light-blue: #FFFFFF;
   }
+
+  /* === LỘ TRÌNH === */
+  #apply-journey {
+    background: #ffffff; /* Nền trắng */
+    padding: 70px 20px;
+  }
+
   .section {
-    padding: 0px 00px;
     max-width: 1100px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
   }
+
   h2.title {
     font-size: 42px;
     font-weight: 800;
@@ -507,24 +515,31 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 40px;
   }
+
   .roadmap-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
+
   .roadmap-bg {
-    background:#ffffff;padding: 20px;
+    background: #ffffff;
+    padding: 20px;
     border-radius: 20px;
     display: inline-block;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 800px; /* căn theo width section ngày hội */
+    width: 100%;
   }
+
   .roadmap-img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 12px;
   }
+
   @media (max-width: 768px) {
     h2.title {
       font-size: 30px;
@@ -544,7 +559,7 @@
 <!-- SECTION: NGÀY HỘI TUYỂN DỤNG -->
 <section class="section career-fair" id="career-fair">
   <div class="fair-card highlight">
-    <h2>THAM GIA NGÀY HỘI TUYỂN DỤNG<br><span>TẠI TRƯỜNG</span></h3>
+    <h2 class="career-title">THAM GIA NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG</h2>
     <p class="tagline">🎓 Sẵn sàng bứt phá sự nghiệp – Bắt đầu từ giảng đường!</p>
 
     <div class="sub-info">
@@ -554,9 +569,8 @@
 
     <ul>
       <li><span class="icon">🚀</span> Workshop “Tài Chính Số – Bí quyết biến Hành trang thành Sự nghiệp”</li>
-      <li><span class="icon">🤝</span> Gặp gỡ & kết nối trực tiếp với Nhà tuyển dụng Sacombank</li>
+      <li><span class="icon">🤝</span> Gặp gỡ & kết nối trực tiếp với Lãnh đạo & Cựu Thực tập viên tại Sacombank</li>
       <li><span class="icon">📝</span> Phỏng vấn trực tiếp – Cơ hội nhận kết quả ngay tại sự kiện</li>
-      <li><span class="icon">💬</span> Giao lưu với Lãnh đạo & Cựu Thực tập viên</li>
       <li><span class="icon">🎁</span> Nhiều phần quà hấp dẫn đang chờ bạn!</li>
     </ul>
 
@@ -569,7 +583,7 @@
 </section>
 
 <style>
-  /* === SECTION: NGÀY HỘI TUYỂN DỤNG (PHIÊN BẢN SINH VIÊN) === */
+  /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
   .career-fair {
     padding: 70px 20px;
     background: linear-gradient(135deg, #eaf6ff 0%, #cde8ff 50%, #b0d8ff 100%);
@@ -578,7 +592,14 @@
     overflow: hidden;
   }
 
-  /* Hiệu ứng nền mềm */
+  .career-fair .career-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0d6efd; /* MÀU XANH */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
   .career-fair::before {
     content: "";
     position: absolute;
@@ -615,18 +636,6 @@
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  .career-fair .fair-card h3 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #0d6efd;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-
-  .career-fair .fair-card h3 span {
-    color: #004bb5;
   }
 
   .career-fair .tagline {
@@ -708,7 +717,7 @@
     .career-fair .fair-card {
       padding: 24px;
     }
-    .career-fair .fair-card h3 {
+    .career-fair .career-title {
       font-size: 1.8rem;
     }
     .career-fair .tagline {
