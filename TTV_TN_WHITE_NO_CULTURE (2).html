@@ -555,19 +555,20 @@
   }
 </style>
 
-<!-- SECTION: NGÀY HỘI TUYỂN DỤNG -->
+<!-- ================= SECTION: NGÀY HỘI TUYỂN DỤNG ================= -->
 <section class="section career-fair" id="career-fair">
-  <!-- ✅ Tiêu đề đã đưa ra ngoài fair-card -->
+  <!-- ✅ Tiêu đề & mô tả chung -->
   <h2 class="career-title">
     THAM GIA <br> NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG
   </h2>
 
-  <div class="fair-card highlight">
-    <div class="sub-info">
-      📍 <strong>34 Trường Đại học trên toàn quốc</strong><br>
-      🌟 Hành trình nghề nghiệp bắt đầu ngay tại trường bạn!
-    </div>
+  <div class="sub-info">
+    📍 <strong>34 Trường Đại học trên toàn quốc</strong><br>
+    🌟 Hành trình nghề nghiệp bắt đầu ngay tại trường bạn!
+  </div>
 
+  <!-- ✅ Nội dung trong khung -->
+  <div class="fair-card highlight">
     <ul>
       <li><span class="icon">🚀</span> Workshop “Tài Chính Số – Bí quyết biến Hành trang thành Sự nghiệp”</li>
       <li><span class="icon">🤝</span> Gặp gỡ & kết nối trực tiếp với Lãnh đạo & Cựu Thực tập viên tại Sacombank</li>
@@ -578,7 +579,7 @@
     <div class="date">🗓 Thời gian: 11/2025 – 05/12/2025</div>
 
     <div class="cta-wrapper">
-      <a href="#" class="btn-cta"> XEM LỊCH NGÀY HỘI</a>
+      <a href="#" class="btn-cta">XEM LỊCH NGÀY HỘI</a>
     </div>
   </div>
 </section>
@@ -593,18 +594,27 @@
     overflow: hidden;
   }
 
-  /* ✅ Tiêu đề nằm ngoài khung */
   .career-fair .career-title {
     font-size: 2.2rem;
     font-weight: 800;
     color: #0d6efd;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     text-transform: uppercase;
   }
 
-  .career-fair::before,
-  .career-fair::after {
-    display: none;
+  .career-fair .sub-info {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    background: #eaf3ff;
+    padding: 14px 18px;
+    border-radius: 12px;
+    display: inline-block;
+    max-width: 800px;
+    width: 100%;
   }
 
   .career-fair .fair-card {
@@ -623,20 +633,6 @@
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  .career-fair .sub-info {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #0d6efd;
-    margin-bottom: 24px;
-    line-height: 1.6;
-    background: #eaf3ff;
-    padding: 14px 18px;
-    border-radius: 12px;
-    display: inline-block;
-    width: 100%;
   }
 
   .career-fair .fair-card ul {
@@ -694,23 +690,22 @@
     .career-fair {
       padding: 30px 16px 10px 16px;
     }
-    .career-fair .fair-card {
-      padding: 24px;
-      text-align: left;
-    }
     .career-fair .career-title {
       font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-    .career-fair .btn-cta {
-      width: 100%;
     }
     .career-fair .sub-info {
       font-size: 1rem;
       text-align: left;
     }
+    .career-fair .fair-card {
+      padding: 24px;
+    }
+    .career-fair .btn-cta {
+      width: 100%;
+    }
   }
 </style>
+
 
   
 <!-- ================= SECTION: CHÂN DUNG ỨNG VIÊN ================= -->
