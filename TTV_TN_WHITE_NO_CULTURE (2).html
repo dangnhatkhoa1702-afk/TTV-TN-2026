@@ -544,20 +544,20 @@
 <!-- SECTION: NGÀY HỘI TUYỂN DỤNG -->
 <section class="section career-fair" id="career-fair">
   <div class="fair-card highlight">
-    <h3>THAM GIA NGÀY HỘI TUYỂN DỤNG</h3>
+    <h3>THAM GIA NGÀY HỘI TUYỂN DỤNG<br><span>TẠI TRƯỜNG</span></h3>
+    <p class="tagline">🎓 Sẵn sàng bứt phá sự nghiệp – Bắt đầu từ giảng đường!</p>
 
     <div class="sub-info">
-      📍 Tổ chức tại <strong>34 Trường Đại học trên toàn quốc</strong><br>
-      🌟 Hành trình bắt đầu ngay từ chính giảng đường của bạn!
+      📍 <strong>34 Trường Đại học trên toàn quốc</strong><br>
+      🌟 Hành trình nghề nghiệp bắt đầu ngay tại trường bạn!
     </div>
 
-    <p>👉 Đây là cơ hội để bạn tiếp cận trực tiếp <strong>Nhà tuyển dụng Sacombank</strong> và thể hiện bản thân ngay tại sự kiện.</p>
     <ul>
-      <li>✔ Tham gia Workshop “Tài Chính Số – Bí quyết biến Hành trang thành Sự nghiệp”</li>
-      <li>✔ Gặp gỡ & kết nối trực tiếp với Nhà tuyển dụng Sacombank</li>
-      <li>✔ Phỏng vấn trực tiếp – Cơ hội nhận kết quả ngay tại sự kiện</li>
-      <li>✔ Giao lưu trực tiếp với các Anh/Chị Lãnh đạo & Cựu Thực tập viên</li>
-      <li>✔ Nhận nhiều phần quà hấp dẫn từ Sacombank</li>
+      <li><span class="icon">🚀</span> Workshop “Tài Chính Số – Bí quyết biến Hành trang thành Sự nghiệp”</li>
+      <li><span class="icon">🤝</span> Gặp gỡ & kết nối trực tiếp với Nhà tuyển dụng Sacombank</li>
+      <li><span class="icon">📝</span> Phỏng vấn trực tiếp – Cơ hội nhận kết quả ngay tại sự kiện</li>
+      <li><span class="icon">💬</span> Giao lưu với Lãnh đạo & Cựu Thực tập viên</li>
+      <li><span class="icon">🎁</span> Nhiều phần quà hấp dẫn đang chờ bạn!</li>
     </ul>
 
     <div class="date">🗓 Thời gian: 11/2025 – 15/12/2025</div>
@@ -569,85 +569,118 @@
 </section>
 
 <style>
-  /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
+  /* === SECTION: NGÀY HỘI TUYỂN DỤNG (PHIÊN BẢN SINH VIÊN) === */
   .career-fair {
-    padding: 20px 20px;
-    background: #ffffff;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #eaf6ff 0%, #cde8ff 50%, #b0d8ff 100%);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hiệu ứng nền mềm */
+  .career-fair::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background: rgba(13,110,253,0.15);
+    border-radius: 50%;
+  }
+  .career-fair::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 160px;
+    height: 160px;
+    background: rgba(13,110,253,0.1);
+    border-radius: 50%;
   }
 
   .career-fair .fair-card {
     background: white;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 36px 32px;
     border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border-left: 6px solid #0d6efd;
+    position: relative;
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .career-fair .fair-card h3 {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: #0d6efd;
-    margin-bottom: 16px;
-    text-align: center;
-    line-height: 1.4;
+    margin-bottom: 10px;
     text-transform: uppercase;
+  }
+
+  .career-fair .fair-card h3 span {
+    color: #004bb5;
+  }
+
+  .career-fair .tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 24px;
   }
 
   .career-fair .sub-info {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #0d6efd;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     line-height: 1.6;
     background: #eaf3ff;
-    padding: 12px 16px;
-    border-radius: 8px;
+    padding: 14px 18px;
+    border-radius: 12px;
     display: inline-block;
-  }
-
-  .career-fair .fair-card p {
-    font-size: 1rem;
-    margin-bottom: 16px;
-    line-height: 1.6;
-    text-align: left;
   }
 
   .career-fair .fair-card ul {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
     text-align: left;
   }
 
   .career-fair .fair-card ul li {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-    padding-left: 28px;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    padding-left: 40px;
     position: relative;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-weight: 500;
+    transition: transform 0.2s ease;
   }
 
-  .career-fair .fair-card ul li::before {
-    content: "✔";
+  .career-fair .fair-card ul li:hover {
+    transform: translateX(5px);
+  }
+
+  .career-fair .fair-card ul li .icon {
     position: absolute;
     left: 0;
     top: 0;
-    color: #0d6efd;
-    font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .career-fair .fair-card .date {
     font-weight: 600;
     color: #0d6efd;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .cta-wrapper {
+    margin-bottom: 24px;
     text-align: center;
   }
 
@@ -655,25 +688,31 @@
     display: inline-block;
     background: #0d6efd;
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: 600;
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-weight: 700;
     text-decoration: none;
+    font-size: 1rem;
     transition: background 0.3s ease, transform 0.2s ease;
-    text-align: center;
   }
 
   .career-fair .btn-cta:hover {
     background: #004bb5;
-    transform: translateY(-2px);
+    transform: scale(1.05);
   }
 
   @media (max-width: 768px) {
+    .career-fair {
+      padding: 50px 16px;
+    }
     .career-fair .fair-card {
-      padding: 16px;
+      padding: 24px;
     }
     .career-fair .fair-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
+    }
+    .career-fair .tagline {
+      font-size: 1rem;
     }
     .career-fair .btn-cta {
       width: 100%;
