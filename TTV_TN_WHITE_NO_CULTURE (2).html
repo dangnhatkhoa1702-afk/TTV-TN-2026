@@ -555,14 +555,14 @@
   }
 </style>
 
-
 <!-- SECTION: NGÀY HỘI TUYỂN DỤNG -->
 <section class="section career-fair" id="career-fair">
-  <div class="fair-card highlight">
-    <h2 class="career-title">
-      THAM GIA <br> NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG
-    </h2>
+  <!-- ✅ Tiêu đề đã đưa ra ngoài fair-card -->
+  <h2 class="career-title">
+    THAM GIA <br> NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG
+  </h2>
 
+  <div class="fair-card highlight">
     <div class="sub-info">
       📍 <strong>34 Trường Đại học trên toàn quốc</strong><br>
       🌟 Hành trình nghề nghiệp bắt đầu ngay tại trường bạn!
@@ -586,18 +586,19 @@
 <style>
   /* === SECTION: NGÀY HỘI TUYỂN DỤNG === */
   .career-fair {
-    padding: 40px 20px 10px 20px; /* ⬅️ giảm top 40px, bottom 10px */
+    padding: 40px 20px 10px 20px;
     background: #ffffff;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
 
+  /* ✅ Tiêu đề nằm ngoài khung */
   .career-fair .career-title {
     font-size: 2.2rem;
     font-weight: 800;
     color: #0d6efd;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     text-transform: uppercase;
   }
 
@@ -616,6 +617,7 @@
     border-left: 6px solid #0d6efd;
     position: relative;
     animation: fadeUp 0.8s ease forwards;
+    text-align: left;
   }
 
   @keyframes fadeUp {
@@ -634,13 +636,13 @@
     padding: 14px 18px;
     border-radius: 12px;
     display: inline-block;
+    width: 100%;
   }
 
   .career-fair .fair-card ul {
     list-style: none;
     padding-left: 0;
     margin-bottom: 28px;
-    text-align: left;
   }
 
   .career-fair .fair-card ul li {
@@ -690,24 +692,28 @@
 
   @media (max-width: 768px) {
     .career-fair {
-      padding: 30px 16px 10px 16px; /* ⬅️ mobile top giảm còn 30px */
+      padding: 30px 16px 10px 16px;
     }
     .career-fair .fair-card {
       padding: 24px;
+      text-align: left;
     }
     .career-fair .career-title {
       font-size: 1.8rem;
+      margin-bottom: 20px;
     }
     .career-fair .btn-cta {
       width: 100%;
     }
     .career-fair .sub-info {
       font-size: 1rem;
-      display: block;
+      text-align: left;
     }
   }
 </style>
 
+
+  
 <!-- ================= SECTION: CHÂN DUNG ỨNG VIÊN ================= -->
 <section id="candidate">
   <div class="candidate-container">
