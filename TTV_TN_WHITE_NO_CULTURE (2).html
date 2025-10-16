@@ -223,6 +223,8 @@
 <body>
 
   <div class="container">
+
+    
     <!-- HEADER -->
     <header>
       <div class="logo">Sacombank</div>
@@ -232,17 +234,41 @@
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-left">
-        <div class="eyebrow">HÀNH TRÌNH 3 THÁNG</div>
-        <h1><span class="h1-accent">Tỏa sáng</span> tương lai</h1>
-        <p class="lead">Thực tập viên Tiềm năng Sacombank 2026 — chương trình 3 tháng thực tế, đào tạo chuyên sâu, mentor cá nhân &amp; cơ hội trở thành nhân viên chính thức.</p>
-      </div>
-      <div class="hero-cta">
-        <a class="btn-primary pulse" id="openReg2">Nộp đơn ngay</a>
-      </div>
-    </section>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">HÀNH TRÌNH 3 THÁNG</div>
+    <h1><span class="h1-accent">Tỏa sáng</span> tương lai</h1>
+    <p class="lead">
+      Thực tập viên Tiềm năng Sacombank 2026 — chương trình 3 tháng thực tế, đào tạo chuyên sâu, mentor cá nhân &amp; cơ hội trở thành nhân viên chính thức.
+    </p>
+  </div>
+  <div class="hero-cta">
+    <a 
+      href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn-primary pulse"
+      aria-label="Nộp đơn ngay qua Google Form"
+    >
+      📝 Nộp đơn ngay
+    </a>
+  </div>
+</section>
+
+<!-- ================= JS Fallback ================= -->
+<script>
+  (function () {
+    const ctaHero = document.querySelector('.hero-cta .btn-primary');
+    if (!ctaHero) return;
+
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform';
+    ctaHero.addEventListener('click', function () {
+      window.open(url, '_blank', 'noopener');
+    });
+  })();
+</script>
+
 
 <!-- ================= SECTION: GIỚI THIỆU CHƯƠNG TRÌNH ================= -->
 <section id="about">
