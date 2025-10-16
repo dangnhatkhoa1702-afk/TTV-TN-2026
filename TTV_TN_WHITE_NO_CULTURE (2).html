@@ -1,238 +1,111 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <title>Thực tập viên Tiềm năng Sacombank 2026</title>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">HÀNH TRÌNH 3 THÁNG</div>
+    <h1><span class="h1-accent">Tỏa sáng</span> tương lai</h1>
+    <p class="lead">
+      Thực tập viên Tiềm năng Sacombank 2026 — chương trình 3 tháng thực tế, đào tạo chuyên sâu, mentor cá nhân &amp; cơ hội trở thành nhân viên chính thức.
+    </p>
+  </div>
+  <div class="hero-cta">
+    <a 
+      href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn-primary pulse"
+      aria-label="Nộp đơn ngay qua Google Form"
+    >
+      📝 Nộp đơn ngay
+    </a>
+  </div>
+</section>
 
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- ================= HERO FIXED CTA CSS ================= -->
+<style>
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff url('assets/hero-bg.jpg') center/cover no-repeat;
+    padding: 48px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(15,60,120,0.06);
+    position: relative;   /* ✅ đảm bảo z-index hoạt động */
+    z-index: 2;
+  }
 
-  <style>
-    :root{
-      --blue:#0d6efd;
-      --deep-blue:#0a4ea0;
-      --orange:#ff7a00;
-      --bg:#f4fbff;
-      --card:#ffffff;
-      --glass: rgba(255,255,255,0.75);
-      --radius:14px;
-      --max:1100px;
-    }
+  .hero-cta .btn-primary {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    pointer-events: auto;
+  }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Montserrat',sans-serif;
-      background:#ffffff;
-      color:#13304a;
-    }
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
 
-    .container{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:28px;
-    }
+  .btn-primary:hover {
+    background: #e86b00;
+    transform: translateY(-3px);
+  }
 
-    /* HEADER */
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:8px 0;
-    }
-    .logo{
-      font-family:Montserrat,sans-serif;
-      font-weight:800;
-      color:var(--deep-blue);
-      font-size:28px
-    }
-    .top-cta{display:flex;gap:12px;align-items:center}
-    .btn-primary{
-      background:var(--orange);
-      color:white;
-      padding:10px 16px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      display:inline-block;
-      text-align:center;
-    }
-    .btn-primary.pulse {animation:pulse 1.5s infinite;}
-    .btn-outline{
-      border:2px solid rgba(13,110,253,0.12);
-      padding:8px 14px;
-      border-radius:10px;
-      background:transparent;
-      color:var(--deep-blue);
-      font-weight:600;
-      text-align:center;
-    }
-    @keyframes pulse {
-      0% {transform: scale(1);box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.6);}
-      70% {transform: scale(1.08);box-shadow: 0 0 0 15px rgba(255, 122, 0, 0);}
-      100% {transform: scale(1);box-shadow: 0 0 0 0 rgba(255, 122, 0, 0);}
-    }
+  .btn-primary.pulse {
+    animation: pulse 1.5s infinite;
+  }
 
-    /* HERO */
-    .hero{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:#fff url('assets/hero-bg.jpg') center/cover no-repeat;
-      padding:48px;
-      border-radius:22px;
-      box-shadow:0 8px 30px rgba(15,60,120,0.06)
-    }
-    .hero-left{max-width:600px}
-    .eyebrow{
-      display:inline-block;
-      background:var(--blue);
-      color:white;
-      padding:6px 12px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:13px
-    }
-    h1{
-      font-family:Montserrat,sans-serif;
-      font-weight:800;
-      margin:10px 0 6px;
-      font-size:44px;
-      line-height:1.02;
-      color:var(--deep-blue)
-    }
-    .h1-accent{color:var(--orange);font-weight:800}
-    p.lead{margin:12px 0 18px;color:#23445f;font-size:16px;max-width:100%}
-    .hero-cta{display:flex;justify-content:flex-end;margin-top:24px}
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.6); }
+    70% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(255, 122, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 122, 0, 0); }
+  }
 
-    /* ABOUT */
-    #about {
-      padding: 80px 20px;
-      background:#ffffff;}
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-      align-items: center;
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
-    }
-    .video-wrapper iframe {
-      position:absolute;
-      top:0; left:0;
-      width:100%; height:100%;
-      border:none;
-    }
-    .about-content {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 91, 170, 0.08);
-    }
-    .about-content h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 26px;
-      color: #005baa;
-      margin-bottom: 20px;
-    }
-    .about-content p {
-      color:#333;
-      font-size:16px;
-      line-height:1.6;
-      margin-bottom:20px;
-      text-align: justify; /* ✅ Căn đều hai bên */
-    }
-    .about-content ul {
-      list-style:none;
-      padding:0;
-      margin:0;
-    }
-    .about-content ul li {
-      margin-bottom:12px;
-      font-weight:600;
-      color:#005baa;
-    }
-
-    /* CULTURE */
-    .culture-slider {
-      display: flex;
+  /* Responsive */
+  @media (max-width: 900px){
+    .hero {
       flex-direction: column;
-      gap: 40px;
-    }
-    .culture-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
       align-items: center;
-      background: white;
+      text-align: center;
+      padding: 28px 16px;
+    }
+    .hero-cta {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 480px){
+    .hero {
       padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
-    .culture-images {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
+    h1 {
+      font-size: 26px;
     }
-    .culture-images img {
-      border-radius: 10px;
-      width: 100%;
-      max-width: 100%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    .culture-text h3 {
-      color: var(--blue);
-      margin-bottom: 12px;
-    }
+  }
+</style>
 
-    /* RESPONSIVE */
-    @media (max-width: 900px){
-      .container{padding:18px;}
-      .hero{flex-direction:column;align-items:center;text-align:center;padding:28px 16px;}
-      h1{font-size:32px;line-height:1.2;}
-      .hero-cta{justify-content:center;margin-top:20px}
-      .about-container{grid-template-columns:1fr;gap:24px;}
-      .about-content{text-align:center;padding:24px;}
-      .culture-item{grid-template-columns:1fr;}
-      header{flex-direction:column;gap:10px;}
-      .top-cta{flex-direction:column;width:100%;}
-      .btn-primary, .btn-outline{width:100%;}
-    }
-    @media (max-width: 480px){
-      .container{padding:14px;}
-      .hero{padding:20px;}
-      h1{font-size:26px;}
-      .about-content{padding:20px;}
-      .about-content h2{font-size:20px;}
-      .about-content p, .about-content ul li{font-size:14px;}
-    }
-  </style>
-</head>
-<body>
+<!-- ================= JS Fallback ================= -->
+<script>
+  (function () {
+    const ctaHero = document.querySelector('.hero-cta .btn-primary');
+    if (!ctaHero) return;
 
-  <div class="container">
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform';
+    ctaHero.addEventListener('click', function (e) {
+      e.preventDefault(); // đảm bảo ưu tiên xử lý này
+      window.open(url, '_blank', 'noopener');
+    });
+  })();
+</script>
 
-    
-    <!-- HEADER -->
-    <header>
-      <div class="logo">Sacombank</div>
-      <div class="top-cta">
-        <a class="btn-outline" href="#about">Giới thiệu</a>
-        <a class="btn-primary" id="openReg">Nộp đơn ngay</a>
-      </div>
-    </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
