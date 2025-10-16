@@ -340,28 +340,18 @@
   }
 </style>
 
-
-
-
 <!-- SECTION: Vị trí tuyển dụng -->
-<section id="positions" class="section">
+<section id="positions" class="section" style="padding:10px 20px;max-width:1200px;margin:0 auto;position:relative;font-family:'Montserrat',sans-serif;">
   <style>
     :root{
       --blue:#005baa;
       --gradient:linear-gradient(135deg,var(--blue),#007BFF);
     }
-    #positions {
-      padding: 20px 20px; /* ✅ giảm khoảng cách trên dưới */
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      font-family: 'Montserrat', sans-serif;
-    }
     #positions h2.title{
       font-size:42px;text-align:center;font-weight:800;
       background:linear-gradient(90deg,var(--blue),#007BFF);
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      margin-bottom:40px;
+      margin-bottom:30px;
     }
     #positions .positions-grid{
       display:grid;
@@ -390,7 +380,7 @@
     #positions .view-details{font-weight:600;color:var(--blue);cursor:pointer;position:relative;z-index:1;transition:color .3s ease;text-decoration:none;}
     #positions .card:hover .view-details{color:#007BFF}
 
-    /* Modal tuyển dụng */
+    /* Recruit Modal */
     #positions .recruit-modal{display:none;position:fixed;inset:0;z-index:1000;justify-content:center;align-items:center;}
     #positions .recruit-modal.show{display:flex;animation:fadeIn .4s ease;}
     #positions .modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(2px);}
@@ -398,11 +388,13 @@
       background:#fff;padding:36px;border-radius:28px;max-width:600px;width:90%;
       z-index:2;animation:scaleUp .3s ease;position:relative;
       max-height:80vh;overflow-y:auto;font-family:'Montserrat',sans-serif;
+      text-align:left; /* ✅ căn lề trái nội dung */
     }
     #positions .modal-content h3{
       font-size:26px;font-weight:800;margin-bottom:16px;
       background:linear-gradient(90deg,var(--blue),#007BFF);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      text-align:center;
     }
     #positions .modal-content p{margin-bottom:6px;font-weight:600;}
     #positions .modal-content ul{margin-top:4px;margin-bottom:16px;padding-left:20px;}
