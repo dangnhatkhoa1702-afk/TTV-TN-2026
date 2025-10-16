@@ -346,7 +346,150 @@
 <!-- ================= SECTION: VỊ TRÍ TUYỂN DỤNG ================= -->
 <section id="positions" class="section" style="padding:10px 0;max-width:1200px;margin:0 auto;position:relative;font-family:'Montserrat',sans-serif;">
   <style>
-    /* ✅ CSS giữ nguyên như bản bạn đã có */
+    #positions {
+      --blue:#005baa;
+      --gradient:linear-gradient(135deg,var(--blue),#007BFF);
+    }
+
+    #positions h2.title{
+      font-size:42px;
+      text-align:center;
+      font-weight:800;
+      background:linear-gradient(90deg,var(--blue),#007BFF);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    #positions .positions-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    #positions .card{
+      background:#fff;
+      padding:28px 24px;
+      border-radius:24px;
+      box-shadow:0 8px 30px rgba(0,0,0,.06);
+      text-align:center;
+      position:relative;
+      transition:transform .35s ease, box-shadow .35s ease;
+      overflow:hidden;
+    }
+
+    #positions .card:hover{
+      transform:translateY(-10px) scale(1.03);
+      box-shadow:0 12px 40px rgba(0,0,0,.1);
+    }
+
+    #positions .card-icon{
+      width:64px;height:64px;
+      background:var(--gradient);
+      border-radius:20px;
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto 16px;
+      color:#fff;font-size:28px;
+      box-shadow:0 6px 15px rgba(0,91,170,0.3);
+    }
+
+    #positions .card strong{
+      font-size:18px;
+      display:block;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    #positions .card p.short-desc{
+      font-size:14px;
+      color:#4b5563;
+      margin-bottom:12px;
+      min-height:42px;
+    }
+
+    #positions .view-details{
+      font-weight:600;
+      color:var(--blue);
+      cursor:pointer;
+      position:relative;
+      z-index:1;
+      transition:color .3s ease;
+      text-decoration:none;
+    }
+
+    /* Modal */
+    #positions .recruit-modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:9999; /* 🔥 quan trọng để nổi lên trên */
+      justify-content:center;
+      align-items:center;
+    }
+
+    #positions .recruit-modal.show{
+      display:flex;
+      animation:fadeIn .4s ease;
+    }
+
+    #positions .modal-overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(2px);
+    }
+
+    #positions .modal-content{
+      background:#fff;
+      padding:36px;
+      border-radius:28px;
+      max-width:600px;
+      width:90%;
+      z-index:2;
+      animation:scaleUp .3s ease;
+      position:relative;
+      max-height:80vh;
+      overflow-y:auto;
+    }
+
+    #positions .modal-content h3{
+      font-size:26px;
+      font-weight:800;
+      margin-bottom:16px;
+      background:linear-gradient(90deg,var(--blue),#007BFF);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-align:center;
+    }
+
+    #positions .close-btn{
+      position:absolute;
+      top:16px;
+      right:20px;
+      font-size:28px;
+      cursor:pointer;
+      color:#666;
+    }
+
+    #positions .cta-box{text-align:center;margin-top:20px}
+    #positions .cta-btn{
+      background:linear-gradient(90deg,var(--blue),#007BFF);
+      color:#fff;
+      padding:14px 28px;
+      font-size:16px;
+      font-weight:700;
+      border:none;
+      border-radius:50px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+    }
+
+    @keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
+    @keyframes scaleUp {from {transform: scale(0.9);}to {transform: scale(1);}}
   </style>
 
   <h2 class="title">VỊ TRÍ TUYỂN DỤNG</h2>
@@ -371,7 +514,7 @@
     </div>
   </div>
 
-  <!-- ✅ MODAL: PERSONAL -->
+  <!-- MODAL 1 -->
   <div class="recruit-modal" id="modal-personal">
     <div class="modal-overlay" onclick="closeRecruitModal()"></div>
     <div class="modal-content">
@@ -380,22 +523,15 @@
       <p><strong>Mô tả công việc:</strong></p>
       <ul>
         <li>Phát triển và chăm sóc khách hàng cá nhân.</li>
-        <li>Tư vấn và bán chéo các sản phẩm tài chính.</li>
-        <li>Đảm bảo chất lượng dịch vụ khách hàng.</li>
-      </ul>
-      <p><strong>Yêu cầu:</strong></p>
-      <ul>
-        <li>Sinh viên chuyên ngành phù hợp, năng động, có kỹ năng giao tiếp.</li>
-        <li>Thực tập tối thiểu 6 buổi/tuần.</li>
+        <li>Tư vấn và bán chéo sản phẩm tài chính.</li>
       </ul>
       <div class="cta-box">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
-           target="_blank" class="cta-btn">Ứng tuyển ngay</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Ứng tuyển ngay</a>
       </div>
     </div>
   </div>
 
-  <!-- ✅ MODAL: BUSINESS -->
+  <!-- MODAL 2 -->
   <div class="recruit-modal" id="modal-business">
     <div class="modal-overlay" onclick="closeRecruitModal()"></div>
     <div class="modal-content">
@@ -403,21 +539,15 @@
       <h3>Chuyên viên Khách hàng Doanh nghiệp</h3>
       <p><strong>Mô tả công việc:</strong></p>
       <ul>
-        <li>Tư vấn và phát triển danh mục khách hàng doanh nghiệp.</li>
-        <li>Chăm sóc và hỗ trợ giải pháp tài chính.</li>
-      </ul>
-      <p><strong>Yêu cầu:</strong></p>
-      <ul>
-        <li>Ưu tiên sinh viên khối ngành kinh tế, tài chính, quản trị.</li>
+        <li>Tư vấn và phát triển khách hàng doanh nghiệp.</li>
       </ul>
       <div class="cta-box">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
-           target="_blank" class="cta-btn">Ứng tuyển ngay</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Ứng tuyển ngay</a>
       </div>
     </div>
   </div>
 
-  <!-- ✅ MODAL: IT -->
+  <!-- MODAL 3 -->
   <div class="recruit-modal" id="modal-it">
     <div class="modal-overlay" onclick="closeRecruitModal()"></div>
     <div class="modal-content">
@@ -425,27 +555,24 @@
       <h3>Công nghệ thông tin / Ngân hàng số</h3>
       <p><strong>Mô tả công việc:</strong></p>
       <ul>
-        <li>Tham gia phát triển giải pháp ngân hàng số.</li>
-        <li>Hỗ trợ vận hành hệ thống CNTT.</li>
-      </ul>
-      <p><strong>Yêu cầu:</strong></p>
-      <ul>
-        <li>Sinh viên chuyên ngành CNTT hoặc liên quan.</li>
+        <li>Phát triển và vận hành giải pháp ngân hàng số.</li>
       </ul>
       <div class="cta-box">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
-           target="_blank" class="cta-btn">Ứng tuyển ngay</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Ứng tuyển ngay</a>
       </div>
     </div>
   </div>
 
-  <!-- Script -->
+  <!-- SCRIPT -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
     function openRecruitModal(id){
-      document.getElementById(`modal-${id}`).classList.add('show');
-      document.body.style.overflow = 'hidden';
+      const modal = document.getElementById(`modal-${id}`);
+      if(modal){
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
     }
     function closeRecruitModal(){
       document.querySelectorAll('#positions .recruit-modal').forEach(m => m.classList.remove('show'));
