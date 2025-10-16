@@ -839,7 +839,12 @@
 
   <!-- CTA BUTTON -->
   <div class="candidate-cta">
-    <a href="#apply" class="btn-primary pulse">Ứng tuyển ngay</a>
+    <a 
+      href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
+      target="_blank" 
+      class="btn-primary pulse">
+      Nộp đơn ngay
+    </a>
   </div>
 </section>
 
@@ -847,7 +852,7 @@
 <style>
   #candidate {
     background:#ffffff;
-    padding: 40px 20px 10px 20px; /* ✅ giảm khoảng cách giống section trên */
+    padding: 40px 20px 10px 20px;
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -926,6 +931,12 @@
     font-weight: 700;
     box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
     display: inline-block;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+
+  #candidate .btn-primary:hover {
+    background: #e86b00;
+    transform: translateY(-3px);
   }
 
   #candidate .pulse {
@@ -961,7 +972,7 @@
 
   @media (max-width: 480px) {
     #candidate {
-      padding: 30px 16px 10px 16px; /* ✅ mobile top giảm còn 30px */
+      padding: 30px 16px 10px 16px;
     }
 
     #candidate .candidate-content h2 {
@@ -978,8 +989,6 @@
     }
   }
 </style>
-
-
 
 <!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
