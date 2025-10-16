@@ -839,11 +839,14 @@
 
   <!-- CTA BUTTON -->
   <div class="candidate-cta">
-    <a 
-      href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
-      target="_blank" 
-      class="btn-primary pulse">
-      Nộp đơn ngay
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-primary pulse"
+      aria-label="Nộp đơn ngay qua Google Form"
+    >
+      📝 Nộp đơn ngay
     </a>
   </div>
 </section>
@@ -851,9 +854,11 @@
 <!-- ================= CSS ================= -->
 <style>
   #candidate {
-    background:#ffffff;
+    background: #ffffff;
     padding: 40px 20px 10px 20px;
     font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 10; /* ✅ đảm bảo không bị lớp khác đè */
   }
 
   /* Layout Desktop */
@@ -884,12 +889,10 @@
   }
 
   #candidate .candidate-content h2 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 32px;
     color: #005baa;
     margin-bottom: 16px;
-    text-align: left;
   }
 
   #candidate .candidate-list {
@@ -919,6 +922,8 @@
   #candidate .candidate-cta {
     margin-top: 48px;
     text-align: center;
+    position: relative;
+    z-index: 20; /* ✅ ưu tiên click */
   }
 
   #candidate .btn-primary {
@@ -989,6 +994,20 @@
     }
   }
 </style>
+
+<!-- ================= JS (Fallback mở link nếu có overlay) ================= -->
+<script>
+  (function () {
+    const cta = document.querySelector('#candidate .btn-primary');
+    if (!cta) return;
+
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform';
+    cta.addEventListener('click', function (e) {
+      // fallback để mở form trong tab mới
+      window.open(url, '_blank', 'noopener');
+    });
+  })();
+</script>
 
 <!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
