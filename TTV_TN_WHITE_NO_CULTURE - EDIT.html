@@ -55,143 +55,171 @@
   }
 
   <style>
-  /* ================= HERO ================= */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: var(--section-padding) 20px;
-    background: var(--bg-section);
-  }
+  //* ================= HERO ================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--section-padding) 20px;
+  background: var(--bg-section);
+}
 
-  .hero-banner {
-    width: 100%;
-    border-radius: 22px;
-    box-shadow: 0 8px 30px rgba(15, 60, 120, 0.06);
-    display: block;
-  }
+.hero-banner {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(15, 60, 120, 0.06);
+  display: block;
+}
 
+/* CTA */
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* Buttons base */
+.btn-primary,
+.btn-outline {
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Nút chính - nổi bật */
+.btn-primary {
+  background: var(--accent);
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #e86b00;
+  transform: translateY(-3px);
+}
+
+/* Nút viền - dễ nhìn hơn */
+.btn-outline {
+  background: #fff;
+  border: 2px solid var(--accent);
+  color: var(--accent) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+/* Hiệu ứng focus khi click */
+.btn-primary:focus,
+.btn-outline:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.4);
+}
+
+/* ================= ABOUT ================= */
+#about {
+  padding: var(--section-padding) 20px;
+  background: var(--bg-section);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.about-content {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 91, 170, 0.08);
+  color: var(--primary);
+}
+
+.about-content h2 {
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-content ul li {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .container { padding: 18px; }
+  .about-container { grid-template-columns: 1fr; gap: 24px; }
+  .about-content { text-align: center; padding: 24px; }
+
+  /* Hero CTA trên mobile */
   .hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 24px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-
   .btn-primary,
   .btn-outline {
-    font-weight: 700;
-    padding: 14px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    text-align: center;
+    width: 100%;
+    max-width: 320px;
   }
+}
 
-  .btn-primary {
-    background: var(--accent);
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
-  }
-
-  .btn-primary:hover {
-    background: #e86b00;
-    transform: translateY(-3px);
-  }
-
-  .btn-outline {
-    border: 2px solid var(--accent);
-    color: var(--accent);
-  }
-
-  .btn-outline:hover {
-    background: var(--accent);
-    color: #fff;
-  }
-
-  /* ================= ABOUT ================= */
-  #about {
-    padding: var(--section-padding) 20px;
-    background: var(--bg-section);
-  }
-
-  .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    align-items: center;
-  }
-
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: var(--radius);
-    box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
-  }
-
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-
-  .about-content {
-    background: var(--card);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 91, 170, 0.08);
-    color: var(--primary);
-  }
-
-  .about-content h2 {
-    font-weight: 800;
-    font-size: 26px;
-    color: var(--primary);
-    margin-bottom: 20px;
-  }
-
-  .about-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
-
-  .about-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .about-content ul li {
-    margin-bottom: 12px;
-    font-weight: 600;
-    color: var(--primary);
-  }
-
-  /* ================= RESPONSIVE ================= */
-  @media (max-width: 900px) {
-    .container { padding: 18px; }
-    .about-container { grid-template-columns: 1fr; gap: 24px; }
-    .about-content { text-align: center; padding: 24px; }
-    .hero-cta { flex-direction: column; align-items: center; width: 100%; }
-    .btn-primary, .btn-outline { width: 100%; max-width: 320px; }
-  }
-
-  @media (max-width: 480px) {
-    .container { padding: 14px; }
-    .about-content { padding: 20px; }
-    .about-content h2 { font-size: 20px; }
-    .about-content p, .about-content ul li { font-size: 14px; }
-  }
+@media (max-width: 480px) {
+  .container { padding: 14px; }
+  .about-content { padding: 20px; }
+  .about-content h2 { font-size: 20px; }
+  .about-content p,
+  .about-content ul li { font-size: 14px; }
+}
 </style>
 
 <!-- ================= HERO ================= -->
