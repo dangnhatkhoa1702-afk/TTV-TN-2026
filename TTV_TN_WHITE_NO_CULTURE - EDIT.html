@@ -1170,57 +1170,66 @@ h2.title {
 </script>
 
 <!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<section id="benefits" class="section" aria-label="Lợi ích khi tham gia chương trình">
+  <div class="container">
+    <h2 class="section-title">Quyền lợi khi tham gia chương trình</h2>
 
-<section id="benefits" style="
-  background: #ffffff;
-  padding: 40px 20px 10px 20px; 
-  text-align: center;
-  font-family: 'Montserrat', 'Montserrat', sans-serif;
-">
-  <div class="container" style="max-width:1100px;margin:0 auto;">
-    <h2 style="
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 36px;
-      color: #005baa;
-      margin-bottom: 20px;
-    ">
-      Quyền lợi khi tham gia chương trình
-    </h2>
-
-    <!-- ✨ Đã xóa đoạn mô tả ở đây -->
-
-    <div class="benefits-image-wrapper" style="display:flex;justify-content:center;">
+    <div class="benefits-image-wrapper">
       <img 
         src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/benefits.jpg" 
         alt="Quyền lợi khi tham gia chương trình"
-        style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06);"
+        class="benefits-image"
       >
     </div>
   </div>
 </section>
 
 <style>
-  /* Responsive */
-  @media (max-width: 768px) {
-    #benefits {
-      padding: 30px 16px 10px 16px; /* ✅ giảm padding mobile */
-    }
+/* ================= LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= */
+#benefits {
+  background: var(--bg-section);
+  padding-top: 40px;        /* Khoảng cách phía trên */
+  padding-bottom: 30px;     /* Giảm khoảng cách phía dưới */
+  text-align: center;
+}
 
-    #benefits h2 {
-      font-size: 26px;
-      margin-bottom: 16px;
-    }
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
 
-    .benefits-image-wrapper img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+.benefits-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  #benefits {
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .benefits-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
 </style>
 
 <!-- ================= SECTION: GIỚI THIỆU NGUỒN NHÂN LỰC ================= -->
