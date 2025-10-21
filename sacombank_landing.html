@@ -66,13 +66,33 @@ footer{ margin-top:40px; font-size:.9rem; color:#555;}
 
 <script>
 const events = [
-  { date: "05/11/2025", time: "13:00", school: "ĐH Kinh tế TP.HCM", location: "Hội trường A - TP.HCM", region: "tphcm" },
-  { date: "10/11/2025", time: "13:00", school: "ĐH Kinh Tế Quốc dân", location: "Hội trường lớn - Hà Nội", region: "hanoi" },
-  { date: "12/11/2025", time: "08:00", school: "ĐH Thái Nguyên", location: "Thái Nguyên", region: "mienbac" },
-  { date: "20/11/2025", time: "08:00", school: "ĐH Đà Nẵng", location: "Đà Nẵng", region: "mientrungtaynguyen" },
-  { date: "27/11/2025", time: "08:00", school: "ĐH Đồng Nai", location: "Đồng Nai", region: "dongnambo" },
-  { date: "03/12/2025", time: "08:00", school: "ĐH Cần Thơ", location: "Cần Thơ", region: "taynambo" }
+  { date: "04/12/2025", time: "13:00", school: "ĐH Ngoại thương CS Quảng Ninh", location: "", region: "mienbac" },
+  { date: "02/12/2025", time: "13:00", school: "HV Ngân hàng - PV Bắc Ninh", location: "", region: "mienbac" },
+  { date: "06/12/2025", time: "08:00", school: "ĐH Hàng Hải", location: "", region: "mienbac" },
+  { date: "05/11/2025", time: "13:00", school: "ĐH Kinh tế quốc dân", location: "", region: "hanoi" },
+  { date: "04/11/2025", time: "18:00", school: "Học viện Tài chính", location: "", region: "hanoi" },
+  { date: "01/12/2025", time: "08:00", school: "ĐH Kinh tế - ĐH Đà Nẵng", location: "", region: "mientrungtaynguyen" },
+  { date: "28/11/2025", time: "08:00", school: "ĐH Kinh tế Huế", location: "", region: "mientrungtaynguyen" },
+  { date: "12/11/2025", time: "08:00", school: "ĐH Khánh Hòa", location: "", region: "mientrungtaynguyen" },
+  { date: "15/11/2025", time: "08:00", school: "ĐH Quy Nhơn", location: "", region: "mientrungtaynguyen" },
+  { date: "05/12/2025", time: "08:00", school: "ĐH Đà Lạt", location: "", region: "dongnambo" },
+  { date: "14/11/2025", time: "13:00", school: "ĐH Thủ Dầu Một", location: "", region: "dongnambo" },
+  { date: "28/11/2025", time: "08:00", school: "ĐH Đồng Nai", location: "", region: "dongnambo" },
+  { date: "17/11/2025", time: "13:00", school: "ĐH Công nghệ TPHCM (Hutech)", location: "", region: "tphcm" },
+  { date: "07/11/2025", time: "08:00", school: "ĐH Ngân hàng (HUB)", location: "", region: "tphcm" },
+  { date: "10/11/2025", time: "13:00", school: "ĐH Kinh Tế TP.HCM (UEH)", location: "", region: "tphcm" },
+  { date: "28/11/2025", time: "08:00", school: "ĐH Văn Lang (VLU)", location: "", region: "tphcm" },
+  { date: "11/11/2025", time: "13:00", school: "ĐH Tài Chính Marketing (UFM)", location: "", region: "tphcm" },
+  { date: "12/12/2025", time: "08:00", school: "ĐH Tôn Đức Thắng (TDTU)", location: "", region: "tphcm" },
+  { date: "11/11/2025", time: "08:00", school: "ĐH Công nghiệp TPHCM (IUH)", location: "", region: "tphcm" },
+  { date: "03/11/2025", time: "13:00", school: "ĐH Công Nghệ thông tin", location: "", region: "tphcm" },
+  { date: "24/11/2025", time: "08:00", school: "ĐH FPT", location: "", region: "tphcm" },
+  { date: "07/11/2025", time: "08:00", school: "ĐH Cần Thơ", location: "", region: "taynambo" },
+  { date: "19/11/2025", time: "13:00", school: "ĐH Nam Cần Thơ", location: "", region: "taynambo" },
+  { date: "17/11/2025", time: "13:00", school: "ĐH Đồng Tháp", location: "", region: "taynambo" },
+  { date: "21/11/2025", time: "13:00", school: "ĐH Tây Đô", location: "", region: "taynambo" }
 ];
+
 
 const calendar = document.getElementById("calendar");
 const regionFilter = document.getElementById("regionFilter");
