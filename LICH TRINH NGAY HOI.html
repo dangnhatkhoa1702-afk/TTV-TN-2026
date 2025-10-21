@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lịch trình Ngày hội tuyển dụng - Sacombank 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root { --primary:#005baa; --accent:#ff6600; --light-bg:#f4f9ff; }
+*{ box-sizing:border-box; margin:0; padding:0; font-family:"Montserrat",sans-serif;}
+html,body{ overflow-x:hidden;}
+body{ background:var(--light-bg); color:#333; text-align:center; padding-bottom:100px;}
+header{ padding:40px 20px 10px;}
+header h1{ color:var(--primary); font-size:2rem; font-weight:800; margin-bottom:25px; line-height:1.4;}
+.fair-card{ background:#fff; border-radius:16px; padding:15px 25px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,.05); max-width:600px; margin:0 auto 20px; border-left:4px solid var(--primary);}
+.fair-card .line{ margin:5px 0; font-weight:500;}
+.fair-card strong{ color:var(--primary);}
+.filter-bar{ position:sticky; top:0; background:var(--light-bg); z-index:100; padding:15px 0 20px; backdrop-filter:blur(8px);}
+select{ padding:10px 20px; border-radius:25px; border:1px solid #ddd; box-shadow:0 3px 6px rgba(0,0,0,.08); font-weight:600; background:#fff; color:#333; cursor:pointer;}
+.calendar{ display:grid; grid-template-columns:repeat(2,minmax(300px,1fr)); gap:20px; justify-content:center; max-width:950px; margin:0 auto; padding:20px;}
+.event-card{ background:#fff; border-radius:16px; padding:20px; text-align:left; box-shadow:0 4px 12px rgba(0,0,0,.08); border-left:6px solid var(--primary); transition:.3s ease; display:flex; flex-direction:column; justify-content:space-between;}
+.event-card:hover{ transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,.12);}
+.event-title{ font-weight:700; color:var(--accent); margin-bottom:10px; font-size:1.05rem; display:flex; align-items:center; gap:8px;}
+.event-title::before{ content:"🎓"; font-size:1.2rem;}
+.event-line{ margin:6px 0; font-size:.95rem;}
+.event-line strong{ color:var(--primary); font-weight:600;}
+.apply-btn{ display:inline-block; margin-top:30px; background:var(--primary); color:#fff; padding:12px 28px; font-weight:600; border-radius:50px; text-decoration:none; box-shadow:0 6px 12px rgba(0,91,170,.3); transition:.3s ease;}
+.apply-btn:hover{ background:#024a89; transform:translateY(-3px);}
+footer{ margin-top:40px; font-size:.9rem; color:#555;}
+@media (max-width:768px){ .calendar{grid-template-columns:1fr;} header h1{font-size:1.6rem;} .event-card{padding:15px;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>LỊCH TRÌNH TỔ CHỨC NGÀY HỘI TUYỂN DỤNG<br>THỰC TẬP VIÊN TIỀM NĂNG 2026</h1>
+  <div class="fair-card">
+    <div class="line">📍 <strong>34 Trường Đại học trên toàn quốc</strong></div>
+    <div class="line">🌟 Hành trình nghề nghiệp bắt đầu ngay tại trường bạn!</div>
+  </div>
+</header>
+
+<!-- Bộ lọc -->
+<div class="filter-bar">
+  <select id="regionFilter">
+    <option value="all">🌏 Toàn quốc</option>
+    <option value="tphcm">🌆 TP. Hồ Chí Minh</option>
+    <option value="hanoi">🏯 TP. Hà Nội</option>
+    <option value="mienbac">🏔️ Miền Bắc</option>
+    <option value="mientrungtaynguyen">🏞️ Miền Trung & Tây Nguyên</option>
+    <option value="dongnambo">🏝️ Đông Nam Bộ</option>
+    <option value="taynambo">🌿 Tây Nam Bộ</option>
+  </select>
+</div>
+
+<section>
+  <div class="calendar" id="calendar"></div>
+</section>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" class="apply-btn" target="_blank">
+  NỘP ĐƠN NGAY
+</a>
+
+
+
+<script>
+const events = [
+  { date: "04/12/2025", time: "13:00", school: "Đại học Ngoại thương - Cơ sở Quảng Ninh", location: "260 Bạch Đằng, P. Nam Khê, TP. Uông Bí, Tỉnh Quảng Ninh", region: "mienbac" },
+  { date: "02/12/2025", time: "13:00", school: "Học viện Ngân hàng - Phân viện Bắc Ninh", location: "Số 91, Đường H Nguyễn Văn Cừ, P. Ninh Xá, TP. Bắc Ninh, Tỉnh Bắc Ninh", region: "mienbac" },
+  { date: "06/12/2025", time: "08:00", school: "Đại học Hàng hải Việt Nam", location: "Số 484 Lạch Tray, Q. Lê Chân, TP. Hải Phòng", region: "mienbac" },
+  { date: "05/11/2025", time: "13:00", school: "Đại học Kinh tế Quốc dân", location: "Số 207 Giải Phóng, Q. Hai Bà Trưng, TP. Hà Nội", region: "hanoi" },
+  { date: "04/11/2025", time: "18:00", school: "Học viện Tài chính", location: "Số 58 Lê Văn Hiến, P. Đức Thắng, Q. Bắc Từ Liêm, TP. Hà Nội", region: "hanoi" },
+  { date: "01/12/2025", time: "08:00", school: "Đại học Kinh tế - Đại học Đà Nẵng", location: "71 Ngũ Hành Sơn, Q. Ngũ Hành Sơn, TP. Đà Nẵng", region: "mientrungtaynguyen" },
+  { date: "28/11/2025", time: "08:00", school: "Đại học Kinh tế - Đại học Huế", location: "Số 99 Hồ Đắc Di, TP. Huế, Tỉnh Thừa Thiên Huế", region: "mientrungtaynguyen" },
+  { date: "12/11/2025", time: "08:00", school: "Đại học Khánh Hòa", location: "Số 01 Nguyễn Chánh, TP. Nha Trang, Tỉnh Khánh Hòa", region: "mientrungtaynguyen" },
+  { date: "15/11/2025", time: "08:00", school: "Đại học Quy Nhơn", location: "170 An Dương Vương, TP. Quy Nhơn, Tỉnh Bình Định", region: "mientrungtaynguyen" },
+  { date: "05/12/2025", time: "08:00", school: "Đại học Đà Lạt", location: "01 Phù Đổng Thiên Vương, P. 8, TP. Đà Lạt, Tỉnh Lâm Đồng", region: "dongnambo" },
+  { date: "14/11/2025", time: "13:00", school: "Đại học Thủ Dầu Một", location: "Số 6 Trần Văn Ơn, P. Phú Hòa, TP. Thủ Dầu Một, Tỉnh Bình Dương", region: "dongnambo" },
+  { date: "28/11/2025", time: "08:00", school: "Đại học Đồng Nai", location: "Số 4, Lê Quý Đôn, P. Tân Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai", region: "dongnambo" },
+  { date: "17/11/2025", time: "13:00", school: "Đại học Công nghệ TP.HCM (HUTECH)", location: "475A Điện Biên Phủ, P. 25, Q. Bình Thạnh, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "07/11/2025", time: "08:00", school: "Đại học Ngân hàng TP.HCM", location: "56 Hoàng Diệu 2, P. Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "10/11/2025", time: "13:00", school: "Đại học Kinh tế TP.HCM (UEH)", location: "59C Nguyễn Đình Chiểu, P. 6, Q. 3, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "28/11/2025", time: "08:00", school: "Đại học Văn Lang", location: "69/68 Đặng Thùy Trâm, P. 13, Q. Bình Thạnh, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "11/11/2025", time: "13:00", school: "Đại học Tài chính - Marketing (UFM)", location: "778 Nguyễn Kiệm, P. 4, Q. Phú Nhuận, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "12/12/2025", time: "08:00", school: "Đại học Tôn Đức Thắng (TDTU)", location: "19 Nguyễn Hữu Thọ, P. Tân Hưng, Q. 7, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "11/11/2025", time: "08:00", school: "Đại học Công nghiệp TP.HCM (IUH)", location: "12 Nguyễn Văn Bảo, P. 4, Q. Gò Vấp, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "24/11/2025", time: "08:00", school: "Đại học FPT", location: "Khu CNC Hòa Lạc, Km29 Đại lộ Thăng Long, H. Thạch Thất, TP. Hà Nội", region: "tphcm" },
+  { date: "07/11/2025", time: "08:00", school: "Đại học Cần Thơ", location: "Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ", region: "taynambo" },
+  { date: "19/11/2025", time: "13:00", school: "Đại học Nam Cần Thơ", location: "168 Nguyễn Văn Cừ nối dài, P. An Bình, Q. Ninh Kiều, TP. Cần Thơ", region: "taynambo" },
+  { date: "17/11/2025", time: "13:00", school: "Đại học Đồng Tháp", location: "783 Phạm Hữu Lầu, P. 6, TP. Cao Lãnh, Tỉnh Đồng Tháp", region: "taynambo" },
+  { date: "21/11/2025", time: "13:00", school: "Đại học Tây Đô", location: "68 Trần Chiên, P. Lê Bình, Q. Cái Răng, TP. Cần Thơ", region: "taynambo" }
+];
+
+
+
+
+const calendar = document.getElementById("calendar");
+const regionFilter = document.getElementById("regionFilter");
+const weekdays = ["Chủ nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+
+function formatEventDate(dateStr, timeStr){
+  const [d,m,y] = dateStr.split("/");
+  const [hh,mm] = timeStr.split(":");
+  const dt = new Date(`${y}-${m}-${d}T${hh}:${mm}`);
+  const weekday = weekdays[dt.getDay()];
+  const dd = String(dt.getDate()).padStart(2,"0");
+  const MM = String(dt.getMonth()+1).padStart(2,"0");
+  const YYYY = dt.getFullYear();
+  const H = String(dt.getHours()).padStart(2,"0");
+  const M = String(dt.getMinutes()).padStart(2,"0");
+  return `${H}h${M} - ${weekday}, ${dd}/${MM}/${YYYY}`;
+}
+
+function renderEvents(filterRegion="all"){
+  calendar.innerHTML = "";
+  const filtered = filterRegion === "all" ? events : events.filter(e => e.region === filterRegion);
+  filtered
+    .sort((a,b)=>{
+      const da = new Date(`${a.date.split("/").reverse().join("-")}T${a.time}`);
+      const db = new Date(`${b.date.split("/").reverse().join("-")}T${b.time}`);
+      return da - db;
+    })
+    .forEach(ev=>{
+      const card = document.createElement("div");
+      card.className = "event-card";
+      card.innerHTML = `
+        <div class="event-title">${ev.school}</div>
+        <div class="event-line"><strong>Thời gian:</strong> ${formatEventDate(ev.date, ev.time)}</div>
+        <div class="event-line"><strong>Địa điểm:</strong> ${ev.location || "-"}</div>
+      `;
+      calendar.appendChild(card);
+    });
+
+  if (filtered.length === 0) {
+    calendar.innerHTML = `<p>🚫 Không có sự kiện trong khu vực này.</p>`;
+  }
+}
+
+renderEvents();
+regionFilter.addEventListener("change", e => renderEvents(e.target.value));
+</script>
+</body>
+</html>
