@@ -1233,7 +1233,7 @@ h2.title {
 </style>
 
 <!-- ================= SECTION: GIỚI THIỆU NGUỒN NHÂN LỰC ================= -->
-<section class="wrap about-hr">
+<section class="section about-hr" aria-label="Giới thiệu nguồn nhân lực Sacombank">
   <h2 class="main-title">
     SACOMBANK KHẲNG ĐỊNH VỊ THẾ NGUỒN NHÂN LỰC DẪN ĐẦU KHU VỰC
   </h2>
@@ -1266,77 +1266,82 @@ h2.title {
 </section>
 
 <style>
+/* ================= GIỚI THIỆU NGUỒN NHÂN LỰC ================= */
+.about-hr {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-hr .main-title {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.about-hr .two-col {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-hr .content {
+  flex: 1 1 550px;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.about-hr .content p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.about-hr .media {
+  flex: 1 1 400px;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-hr .media img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 91, 170, 0.15);
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
   .about-hr {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 16px;
   }
 
   .about-hr .main-title {
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
-    color: #004b8f;
-    margin-bottom: 24px;
-    line-height: 1.3;
+    font-size: 22px;
+    line-height: 1.4;
   }
 
   .about-hr .two-col {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .about-hr .content {
-    flex: 1 1 550px;
-    min-width: 300px;
-    text-align: justify;              /* ✅ gom justify vào CSS */
-  }
-
-  .about-hr .content p {
-    margin-bottom: 16px;
-    line-height: 1.6;                 /* ✅ dễ đọc hơn */
-    font-size: 16px;
-    color: #004b8f;
-  }
-
-  .about-hr .media {
-    flex: 1 1 400px;
-    min-width: 280px;
-    display: flex;
-    justify-content: center;
+    text-align: left;
   }
 
   .about-hr .media img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 91, 170, 0.15);
-    object-fit: cover;
+    max-width: 100%;
   }
-
-  /* ============ RESPONSIVE ============ */
-  @media (max-width: 768px) {
-    .about-hr .main-title {
-      font-size: 22px;
-      line-height: 1.4;
-    }
-
-    .about-hr .two-col {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .about-hr .content {
-      text-align: left;               /* ✅ text căn trái trên mobile để dễ đọc */
-    }
-
-    .about-hr .media img {
-      max-width: 100%;
-    }
-  }
+}
 </style>
 
 <!-- ================= SECTION: GIẢI THƯỞNG NỔI BẬT ================= -->
