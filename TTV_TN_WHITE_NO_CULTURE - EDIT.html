@@ -728,74 +728,68 @@
   </div>
 </section>
 
-<style>
-  :root {
-    --blue: #005baa; /* ✅ Màu chủ đạo */
-    --purple: #007BFF; /* ✅ xanh nhạt bổ trợ */
-    --bg-light-blue: #FFFFFF;
-  }
+/* ================= LỘ TRÌNH ỨNG TUYỂN ================= */
+#apply-journey {
+  background: var(--bg-section);
+  padding: 40px 20px; /* đồng bộ spacing giữa các section */
+}
 
-  /* === LỘ TRÌNH ỨNG TUYỂN === */
-  #apply-journey {
-    background: #ffffff;  /* ✅ Nền trắng */
-    padding: 10px 20px;      /* ✅ Trên dưới = 0px, giữ 20px hai bên */
-  }
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-family: var(--font-family);
+  text-align: center;
+}
 
-  .section {
-    max-width: 1100px;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-  }
+h2.title {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 30px 0; /* bỏ margin-top, giữ nhẹ margin-bottom */
+}
 
+.roadmap-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.roadmap-bg {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(0, 91, 170, 0.08);
+  max-width: 800px;
+  width: 100%;
+}
+
+.roadmap-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius) - 4px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
   h2.title {
-    font-size: 42px;
-    font-weight: 800;
-    background: linear-gradient(90deg, var(--blue), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0 0 30px 0;  /* ✅ bỏ margin-top, giữ nhẹ margin-bottom */
-  }
-
-  .roadmap-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .roadmap-bg {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    box-shadow: 0 10px 30px rgba(0, 91, 170, 0.08); /* ✅ tinh chỉnh shadow theo màu xanh */
-    max-width: 800px;
-    width: 100%;
-  }
-
-  .roadmap-img {
-    width: 100%;
-    height: auto;
-    display: block;
+    padding: 12px;
     border-radius: 12px;
   }
 
-  /* === Responsive === */
-  @media (max-width: 768px) {
-    h2.title {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-    .roadmap-bg {
-      padding: 12px;
-      border-radius: 12px;
-    }
-    .roadmap-img {
-      border-radius: 8px;
-    }
+  .roadmap-img {
+    border-radius: 8px;
   }
-</style>
+}
 
 
 <!-- ================= SECTION: NGÀY HỘI TUYỂN DỤNG ================= -->
