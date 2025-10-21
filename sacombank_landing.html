@@ -64,32 +64,33 @@ footer{ margin-top:40px; font-size:.9rem; color:#555;}
 
 <script>
 const events = [
-  { date: "04/12/2025", time: "13:00", school: "ĐH Ngoại thương CS Quảng Ninh", location: "", region: "mienbac" },
-  { date: "02/12/2025", time: "13:00", school: "HV Ngân hàng - PV Bắc Ninh", location: "", region: "mienbac" },
-  { date: "06/12/2025", time: "08:00", school: "ĐH Hàng Hải", location: "", region: "mienbac" },
-  { date: "05/11/2025", time: "13:00", school: "ĐH Kinh tế quốc dân", location: "", region: "hanoi" },
-  { date: "04/11/2025", time: "18:00", school: "Học viện Tài chính", location: "", region: "hanoi" },
-  { date: "01/12/2025", time: "08:00", school: "ĐH Kinh tế - ĐH Đà Nẵng", location: "", region: "mientrungtaynguyen" },
-  { date: "28/11/2025", time: "08:00", school: "ĐH Kinh tế Huế", location: "", region: "mientrungtaynguyen" },
-  { date: "12/11/2025", time: "08:00", school: "ĐH Khánh Hòa", location: "", region: "mientrungtaynguyen" },
-  { date: "15/11/2025", time: "08:00", school: "ĐH Quy Nhơn", location: "", region: "mientrungtaynguyen" },
-  { date: "05/12/2025", time: "08:00", school: "ĐH Đà Lạt", location: "", region: "dongnambo" },
-  { date: "14/11/2025", time: "13:00", school: "ĐH Thủ Dầu Một", location: "", region: "dongnambo" },
-  { date: "28/11/2025", time: "08:00", school: "ĐH Đồng Nai", location: "", region: "dongnambo" },
-  { date: "17/11/2025", time: "13:00", school: "ĐH Công nghệ TPHCM (Hutech)", location: "", region: "tphcm" },
-  { date: "07/11/2025", time: "08:00", school: "ĐH Ngân hàng (HUB)", location: "", region: "tphcm" },
-  { date: "10/11/2025", time: "13:00", school: "ĐH Kinh Tế TP.HCM (UEH)", location: "", region: "tphcm" },
-  { date: "28/11/2025", time: "08:00", school: "ĐH Văn Lang (VLU)", location: "", region: "tphcm" },
-  { date: "11/11/2025", time: "13:00", school: "ĐH Tài Chính Marketing (UFM)", location: "", region: "tphcm" },
-  { date: "12/12/2025", time: "08:00", school: "ĐH Tôn Đức Thắng (TDTU)", location: "", region: "tphcm" },
-  { date: "11/11/2025", time: "08:00", school: "ĐH Công nghiệp TPHCM (IUH)", location: "", region: "tphcm" },
-  { date: "03/11/2025", time: "13:00", school: "ĐH Công Nghệ thông tin", location: "", region: "tphcm" },
-  { date: "24/11/2025", time: "08:00", school: "ĐH FPT", location: "", region: "tphcm" },
-  { date: "07/11/2025", time: "08:00", school: "ĐH Cần Thơ", location: "", region: "taynambo" },
-  { date: "19/11/2025", time: "13:00", school: "ĐH Nam Cần Thơ", location: "", region: "taynambo" },
-  { date: "17/11/2025", time: "13:00", school: "ĐH Đồng Tháp", location: "", region: "taynambo" },
-  { date: "21/11/2025", time: "13:00", school: "ĐH Tây Đô", location: "", region: "taynambo" }
+  { date: "04/12/2025", time: "13:00", school: "Đại học Ngoại thương - Cơ sở Quảng Ninh", location: "260 Bạch Đằng, P. Nam Khê, TP. Uông Bí, Tỉnh Quảng Ninh", region: "mienbac" },
+  { date: "02/12/2025", time: "13:00", school: "Học viện Ngân hàng - Phân viện Bắc Ninh", location: "Số 91, Đường H Nguyễn Văn Cừ, P. Ninh Xá, TP. Bắc Ninh, Tỉnh Bắc Ninh", region: "mienbac" },
+  { date: "06/12/2025", time: "08:00", school: "Đại học Hàng hải Việt Nam", location: "Số 484 Lạch Tray, Q. Lê Chân, TP. Hải Phòng", region: "mienbac" },
+  { date: "05/11/2025", time: "13:00", school: "Đại học Kinh tế Quốc dân", location: "Số 207 Giải Phóng, Q. Hai Bà Trưng, TP. Hà Nội", region: "hanoi" },
+  { date: "04/11/2025", time: "18:00", school: "Học viện Tài chính", location: "Số 58 Lê Văn Hiến, P. Đức Thắng, Q. Bắc Từ Liêm, TP. Hà Nội", region: "hanoi" },
+  { date: "01/12/2025", time: "08:00", school: "Đại học Kinh tế - Đại học Đà Nẵng", location: "71 Ngũ Hành Sơn, Q. Ngũ Hành Sơn, TP. Đà Nẵng", region: "mientrungtaynguyen" },
+  { date: "28/11/2025", time: "08:00", school: "Đại học Kinh tế - Đại học Huế", location: "Số 99 Hồ Đắc Di, TP. Huế, Tỉnh Thừa Thiên Huế", region: "mientrungtaynguyen" },
+  { date: "12/11/2025", time: "08:00", school: "Đại học Khánh Hòa", location: "Số 01 Nguyễn Chánh, TP. Nha Trang, Tỉnh Khánh Hòa", region: "mientrungtaynguyen" },
+  { date: "15/11/2025", time: "08:00", school: "Đại học Quy Nhơn", location: "170 An Dương Vương, TP. Quy Nhơn, Tỉnh Bình Định", region: "mientrungtaynguyen" },
+  { date: "05/12/2025", time: "08:00", school: "Đại học Đà Lạt", location: "01 Phù Đổng Thiên Vương, P. 8, TP. Đà Lạt, Tỉnh Lâm Đồng", region: "dongnambo" },
+  { date: "14/11/2025", time: "13:00", school: "Đại học Thủ Dầu Một", location: "Số 6 Trần Văn Ơn, P. Phú Hòa, TP. Thủ Dầu Một, Tỉnh Bình Dương", region: "dongnambo" },
+  { date: "28/11/2025", time: "08:00", school: "Đại học Đồng Nai", location: "Số 4, Lê Quý Đôn, P. Tân Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai", region: "dongnambo" },
+  { date: "17/11/2025", time: "13:00", school: "Đại học Công nghệ TP.HCM (HUTECH)", location: "475A Điện Biên Phủ, P. 25, Q. Bình Thạnh, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "07/11/2025", time: "08:00", school: "Đại học Ngân hàng TP.HCM", location: "56 Hoàng Diệu 2, P. Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "10/11/2025", time: "13:00", school: "Đại học Kinh tế TP.HCM (UEH)", location: "59C Nguyễn Đình Chiểu, P. 6, Q. 3, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "28/11/2025", time: "08:00", school: "Đại học Văn Lang", location: "69/68 Đặng Thùy Trâm, P. 13, Q. Bình Thạnh, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "11/11/2025", time: "13:00", school: "Đại học Tài chính - Marketing (UFM)", location: "778 Nguyễn Kiệm, P. 4, Q. Phú Nhuận, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "12/12/2025", time: "08:00", school: "Đại học Tôn Đức Thắng (TDTU)", location: "19 Nguyễn Hữu Thọ, P. Tân Hưng, Q. 7, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "11/11/2025", time: "08:00", school: "Đại học Công nghiệp TP.HCM (IUH)", location: "12 Nguyễn Văn Bảo, P. 4, Q. Gò Vấp, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "03/11/2025", time: "13:00", school: "Đại học Công nghệ Thông tin - ĐHQG TP.HCM", location: "Khu phố 6, P. Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh", region: "tphcm" },
+  { date: "24/11/2025", time: "08:00", school: "Đại học FPT", location: "Khu CNC Hòa Lạc, Km29 Đại lộ Thăng Long, H. Thạch Thất, TP. Hà Nội", region: "tphcm" },
+  { date: "07/11/2025", time: "08:00", school: "Đại học Cần Thơ", location: "Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ", region: "taynambo" },
+  { date: "19/11/2025", time: "13:00", school: "Đại học Nam Cần Thơ", location: "168 Nguyễn Văn Cừ nối dài, P. An Bình, Q. Ninh Kiều, TP. Cần Thơ", region: "taynambo" },
+  { date: "17/11/2025", time: "13:00", school: "Đại học Đồng Tháp", location: "783 Phạm Hữu Lầu, P. 6, TP. Cao Lãnh, Tỉnh Đồng Tháp", region: "taynambo" },
+  { date: "21/11/2025", time: "13:00", school: "Đại học Tây Đô", location: "68 Trần Chiên, P. Lê Bình, Q. Cái Răng, TP. Cần Thơ", region: "taynambo" }
 ];
+
 
 
 const calendar = document.getElementById("calendar");
