@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Thực tập viên Tiềm năng Sacombank 2026</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ================= ROOT & GLOBAL ================= */
+  :root {
+    --primary: #005baa;
+    --primary-dark: #004b8f;
+    --accent: #ff7a00;
+    --bg: #f4fbff;
+    --bg-section: #ffffff;
+    --card: #ffffff;
+    --glass: rgba(255, 255, 255, 0.75);
+    --radius: 14px;
+    --max-width: 1100px;
+    --section-padding: 10px;
+    --font-family: 'Montserrat', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--primary);
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg-section);
+    color: var(--primary);
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 28px;
+  }
+
+  .section {
+    padding: var(--section-padding) 20px;
+  }
+  <style>
+ 
+  
+  //* ================= HERO ================= */
+  .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--section-padding) 20px;
+  background: var(--bg-section);
+}
+
+.hero-banner {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(15, 60, 120, 0.06);
+  display: block;
+}
+
+/* CTA */
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* Buttons base */
+.btn-primary,
+.btn-outline {
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Nút chính - nổi bật */
+.btn-primary {
+  background: var(--accent);
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #e86b00;
+  transform: translateY(-3px);
+}
+
+/* Nút viền - dễ nhìn hơn */
+.btn-outline {
+  background: #fff;
+  border: 2px solid var(--accent);
+  color: var(--accent) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+/* Hiệu ứng focus khi click */
+.btn-primary:focus,
+.btn-outline:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.4);
+}
+
+/* ================= ABOUT ================= */
+#about {
+  padding: var(--section-padding) 20px;
+  background: var(--bg-section);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.about-content {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 91, 170, 0.08);
+  color: var(--primary);
+}
+
+.about-content h2 {
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-content ul li {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .container { padding: 18px; }
+  .about-container { grid-template-columns: 1fr; gap: 24px; }
+  .about-content { text-align: center; padding: 24px; }
+
+  /* Hero CTA trên mobile */
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 14px; }
+  .about-content { padding: 20px; }
+  .about-content h2 { font-size: 20px; }
+  .about-content p,
+  .about-content ul li { font-size: 14px; }
+}
+</style>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <img 
+    src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/Banner%20(2).jpg" 
+    alt="Banner chương trình Thực tập viên Tiềm năng Sacombank 2026" 
+    class="hero-banner">
+    
+  <div class="hero-cta">
+    <a href="#positions" class="btn-primary">🚀 Khám phá cơ hội thực tập</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" 
+       target="_blank" 
+       class="btn-outline">📝 Nộp đơn ngay</a>
+  </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="about-container">
+    <div class="about-video">
+      <img 
+        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/Gioithieu.jpg" 
+        alt="Giới thiệu chương trình Thực tập viên Tiềm năng Sacombank 2026">
+    </div>
+
+    <div class="about-content">
+      <h2>GIỚI THIỆU CHƯƠNG TRÌNH</h2>
+      <p>
+        🔥 Thực tập viên Tiềm năng Sacombank 2026 đã quay trở lại – mùa thứ 16 hứa hẹn bùng nổ hơn bao giờ hết!
+      </p>
+      <p>
+        Nếu bạn là sinh viên năm cuối đang tìm kiếm một bệ phóng thật chất để khởi động sự nghiệp ngân hàng, thì đây chính là cơ hội dành cho bạn!
+      </p>
+      <ul>
+        <li>🧑‍🏫 Training thực chiến cùng mentor tận tâm, theo sát từng bước phát triển</li>
+        <li>🚀 Cơ hội trở thành nhân viên Sacombank trước khi tốt nghiệp</li>
+        <li>💰 Hỗ trợ chi phí sau quá trình thực tập, xứng đáng với nỗ lực của bạn</li>
+      </ul>
+      <p>
+        👉 Ba tháng không chỉ là thực tập – mà là bước đệm để bạn chạm đến tương lai mình muốn!
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ================= FONT ================= */
+  /* ================= ABOUT SECTION ================= */
+#about {
+  padding: 40px 20px;
+  margin: 0;
+  background: var(--bg-section);
+  color: var(--primary);
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-video,
+.about-content {
+  flex: 1 1 450px;
+  min-width: 320px;
+}
+
+.about-video img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
+  display: block;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary);
+}
+
+.about-content p,
+.about-content ul li {
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.about-content ul {
+  padding-left: 20px;
+  margin: 0 0 8px;
+  list-style: none;
+}
+
+.about-content ul li {
+  margin-bottom: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    text-align: left;
+  }
+
+  .about-video img {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  .about-content ul {
+    padding-left: 0;
+  }
+
+  .about-content ul li {
+    list-style-position: inside;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+
+<!-- SECTION: Vị trí tuyển dụng -->
+<section id="positions" class="section" style="padding:10px 20px;max-width:1200px;margin:0 auto;position:relative;font-family:'Montserrat',sans-serif;">
+  <style>
+  :root {
+    --blue: #005baa; /* ✅ Màu chủ đạo */
+    --gradient: linear-gradient(135deg, var(--blue), #007BFF);
+  }
+
+  /* ======= Tiêu đề ======= */
+  #positions h2.title {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--blue), #007BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+  }
+
+  /* ======= Lưới card ======= */
+  #positions .positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ======= Card ======= */
+  #positions .card {
+    background: #fff;
+    padding: 28px 24px;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .06);
+    text-align: center;
+    position: relative;
+    transition: transform .35s ease, box-shadow .35s ease;
+    overflow: hidden;
+    color: #005baa;
+  }
+
+  #positions .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity .35s ease;
+    z-index: 0;
+  }
+
+  #positions .card:hover::before { opacity: 0.08; }
+  #positions .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .1);
+  }
+
+  /* ======= Icon ======= */
+  #positions .card-icon {
+    width: 64px;
+    height: 64px;
+    background: #ffffff;                  /* ✅ đổi nền icon thành trắng */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: #005baa;                       /* ✅ đổi icon thành màu xanh */
+    font-size: 28px;
+    box-shadow: 0 6px 15px rgba(0, 91, 170, 0.3);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ======= Nội dung card ======= */
+  #positions .card strong {
+    font-size: 18px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #005baa;
+  }
+
+  #positions .card p.short-desc {
+    font-size: 14px;
+    color: #005baa; /* ✅ trước đây là trắng → đổi về màu chủ đạo */
+    margin-bottom: 12px;
+    min-height: 42px;
+  }
+
+  #positions .view-details {
+    font-weight: 600;
+    color: var(--blue);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color .3s ease;
+    text-decoration: none;
+  }
+
+  #positions .card:hover .view-details {
+    color: #007BFF;
+  }
+
+  /* ======= Modal ======= */
+  #positions .recruit-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #positions .recruit-modal.show {
+    display: flex;
+    animation: fadeIn .4s ease;
+  }
+
+  #positions .modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+
+  #positions .modal-content {
+    background: #fff;
+    padding: 36px;
+    border-radius: 28px;
+    max-width: 600px;
+    width: 90%;
+    z-index: 2;
+    animation: scaleUp .3s ease;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    color: #005baa;
+  }
+
+  #positions .modal-content h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, var(--blue), #007BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  #positions .modal-content p {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #005baa;
+  }
+
+  #positions .modal-content ul {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  #positions .modal-content ul li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #005baa;
+  }
+
+  #positions .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #005baa;
+    transition: color .3s ease;
+  }
+
+  #positions .close-btn:hover {
+    color: #007BFF;
+  }
+
+  /* ======= CTA ======= */
+  #positions .cta-box {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #positions .cta-btn {
+    background: linear-gradient(90deg, var(--blue), #007BFF);
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    transition: transform .3s ease, box-shadow .3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  #positions .cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .2);
+  }
+
+  /* ======= Hiệu ứng ======= */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleUp {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+  }
+
+  /* ======= Responsive ======= */
+  @media (max-width: 600px) {
+    #positions .modal-content { padding: 24px; }
+    #positions .modal-content h3 { font-size: 20px; }
+  }
+</style>
+
+
+  <h2 class="title">VỊ TRÍ TUYỂN DỤNG</h2>
+  <div class="positions-grid">
+    <div class="card">
+      <div class="card-icon"><i data-lucide="users"></i></div>
+      <strong>Chuyên viên <br> Khách hàng Cá nhân</strong>
+      <p class="short-desc">Phát triển và chăm sóc khách hàng cá nhân, tư vấn sản phẩm tài chính.</p>
+      <a href="#" class="view-details" onclick="event.preventDefault(); openRecruitModal('personal')">Xem chi tiết</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i data-lucide="briefcase"></i></div>
+      <strong>Chuyên viên <br> Khách hàng Doanh nghiệp</strong>
+      <p class="short-desc">Tư vấn và phát triển danh mục khách hàng doanh nghiệp.</p>
+      <a href="#" class="view-details" onclick="event.preventDefault(); openRecruitModal('business')">Xem chi tiết</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i data-lucide="cpu"></i></div>
+      <strong>Công nghệ thông tin <br> Ngân hàng số</strong>
+      <p class="short-desc">Tham gia phát triển giải pháp ngân hàng số, hỗ trợ vận hành hệ thống.</p>
+      <a href="#" class="view-details" onclick="event.preventDefault(); openRecruitModal('it')">Xem chi tiết</a>
+    </div>
+  </div>
+
+  <!-- Modal JD - KHCN -->
+  <div class="recruit-modal" id="modal-personal">
+    <div class="modal-overlay" onclick="closeRecruitModal()"></div>
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRecruitModal()">&times;</span>
+      <h3>Chuyên viên Khách hàng Cá nhân</h3>
+      <p><strong>Mô tả công việc:</strong></p>
+      <ul>
+        <li>Tìm kiếm, tư vấn và chăm sóc khách hàng cá nhân.</li>
+        <li>Hỗ trợ khách hàng mở tài khoản, sử dụng dịch vụ ngân hàng.</li>
+        <li>Phối hợp thực hiện các chương trình bán hàng.</li>
+      </ul>
+      <p><strong>Yêu cầu:</strong></p>
+      <ul>
+        <li>Sinh viên năm cuối hoặc sẽ tốt nghiệp trong năm 2026 các ngành Kinh tế, Tài chính – Ngân hàng, Kế toán, Quản trị kinh doanh.</li>
+        <li>Kỹ năng giao tiếp tốt, ngoại hình ưa nhìn là lợi thế.</li>
+      </ul>
+      <div class="cta-box">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Nộp đơn ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal JD - KHDN -->
+  <div class="recruit-modal" id="modal-business">
+    <div class="modal-overlay" onclick="closeRecruitModal()"></div>
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRecruitModal()">&times;</span>
+      <h3>Chuyên viên Khách hàng <br> Doanh nghiệp</h3>
+      <p><strong>Mô tả công việc:</strong></p>
+      <ul>
+        <li>Phát triển và quản lý danh mục khách hàng doanh nghiệp.</li>
+        <li>Tư vấn sản phẩm tín dụng, huy động vốn và dịch vụ tài chính.</li>
+        <li>Đàm phán, ký kết hợp đồng với doanh nghiệp.</li>
+      </ul>
+      <p><strong>Yêu cầu:</strong></p>
+      <ul>
+        <li>Sinh viên năm cuối hoặc sẽ tốt nghiệp trong năm 2026 các ngành Kinh tế, Tài chính – Ngân hàng, Kế toán, Quản trị kinh doanh.</li>
+        <li>Kỹ năng đàm phán, phân tích tài chính tốt.</li>
+      </ul>
+      <div class="cta-box">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Nộp đơn ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal JD - IT -->
+  <div class="recruit-modal" id="modal-it">
+    <div class="modal-overlay" onclick="closeRecruitModal()"></div>
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRecruitModal()">&times;</span>
+      <h3>Công nghệ thông tin / Ngân hàng số</h3>
+      <p><strong>Mô tả công việc:</strong></p>
+      <ul>
+        <li>Tham gia xây dựng, vận hành các giải pháp công nghệ ngân hàng.</li>
+        <li>Phát triển ứng dụng, website, hệ thống thanh toán.</li>
+        <li>Phối hợp triển khai sản phẩm ngân hàng số mới.</li>
+      </ul>
+      <p><strong>Yêu cầu:</strong></p>
+      <ul>
+        <li>Sinh viên năm cuối hoặc sẽ tốt nghiệp trong năm 2026 các Chuyên ngành Công nghệ thông tin, Kỹ thuật phần mềm hoặc tương đương.</li>
+        <li>Biết ngôn ngữ lập trình, kỹ năng teamwork tốt.</li>
+      </ul>
+      <div class="cta-box">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Nộp đơn ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    function openRecruitModal(id){
+      document.getElementById(`modal-${id}`).classList.add('show');
+    }
+    function closeRecruitModal(){
+      document.querySelectorAll('#positions .recruit-modal').forEach(m => m.classList.remove('show'));
+    }
+  </script>
+</section>
+<!-- END SECTION -->
+
+
+
+<!-- ================= SECTION: LỘ TRÌNH ỨNG TUYỂN ================= -->
+<section class="section" id="apply-journey" aria-label="Lộ trình ứng tuyển">
+  <h2 class="title">LỘ TRÌNH ỨNG TUYỂN</h2>
+  <div class="roadmap-wrapper">
+    <div class="roadmap-bg">
+      <img 
+        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/lo%20trinh%20ung%20tuyen.jpg" 
+        alt="Lộ trình ứng tuyển" 
+        class="roadmap-img"
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= LỘ TRÌNH ỨNG TUYỂN ================= */
+/* ================= LỘ TRÌNH ỨNG TUYỂN ================= */
+#apply-journey {
+  background: var(--bg-section);
+  padding: 40px 20px;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+h2.title {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 30px 0;
+}
+
+.roadmap-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.roadmap-bg {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 91, 170, 0.08);
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roadmap-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 4px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  h2.title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .roadmap-bg {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .roadmap-img {
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+  
+<!-- ================= SECTION: NGÀY HỘI TUYỂN DỤNG ================= -->
+<section class="section career-fair" id="career-fair" aria-labelledby="career-fair-title">
+  <!-- Tiêu đề ngoài card -->
+  <h2 class="career-title" id="career-fair-title">
+    THAM GIA <br> NGÀY HỘI TUYỂN DỤNG TẠI TRƯỜNG
+  </h2>
+
+  <!-- Card nội dung -->
+  <div class="fair-card">
+    <div class="sub-info" role="note" aria-label="Thông tin chung">
+      📍 <strong>34 Trường Đại học trên toàn quốc</strong><br>
+      🌟 Hành trình nghề nghiệp bắt đầu ngay tại trường bạn!
+    </div>
+
+    <ul class="highlights" aria-label="Hoạt động tại sự kiện">
+      <li><span class="icon" aria-hidden="true">🚀</span> Tham dự chuỗi Workshop với nhiều chủ đề hấp dẫn từ chuyên gia Sacombank</li>
+      <li><span class="icon" aria-hidden="true">🤝</span> Giao lưu trực tiếp với Cựu Sinh viên nhà trường từng là Thực tập viên tiềm năng</li>
+      <li><span class="icon" aria-hidden="true">📝</span> Phỏng vấn trực tiếp tại cùng Hội đồng phỏng vấn</li>
+      <li><span class="icon" aria-hidden="true">📸</span> Chụp ảnh Profile chuyên nghiệp cùng Photographer tại ngày hội</li>
+      <li><span class="icon" aria-hidden="true">🎁</span> Nhiều quà tặng hấp dẫn đặc biệt mang thương hiệu Sacombank</li>
+    </ul>
+
+    <p class="date" aria-label="Thời gian diễn ra">🗓 Thời gian: 11/2025 – 05/12/2025</p>
+
+    <div class="cta-wrapper">
+      <a 
+        class="btn-cta" 
+        href="https://sacombankcareer.com/content/LICH-TRINH-NGAY-HOI-TTVTN/?locale=vi_VN&previewLink=true&overrideEmployeeLogin=false&referrerSave=false" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Xem lịch chi tiết ngày hội">
+        XEM LỊCH NGÀY HỘI
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* ========= Career Fair Section ========= */
+  .career-fair {
+    --cf-primary: var(--blue);     
+    --cf-bg-soft: #fffff;
+    padding: 10px 20px;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .career-fair .career-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: var(--text-color); /* ✅ dùng màu chữ chủ đạo */
+    margin: 0 0 24px;
+    text-transform: uppercase;
+  }
+
+  .career-fair .fair-card {
+    background: #fff;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 28px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left: 6px solid var(--cf-primary);
+    text-align: left;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: cf-fadeUp 0.6s ease forwards;
+  }
+
+  @keyframes cf-fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .career-fair .sub-info {
+    background: var(--cf-bg-soft);
+    color: var(--text-color);  /* ✅ thống nhất màu text */
+    font-weight: 600;
+    line-height: 1.6;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin: 0 0 22px;
+    text-align: center;
+  }
+
+  .career-fair .highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+  }
+
+  .career-fair .highlights li {
+    position: relative;
+    padding-left: 40px;
+    margin: 0 0 12px;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    color: var(--text-color);  /* ✅ đồng bộ màu chữ */
+  }
+
+  .career-fair .highlights li:hover { transform: translateX(4px); }
+
+  .career-fair .highlights .icon {
+    position: absolute;
+    left: 0; top: 0;
+    font-size: 1.25rem;
+  }
+
+  .career-fair .date {
+    margin: 0 0 22px;
+    font-weight: 600;
+    color: var(--text-color); /* ✅ đồng bộ */
+    text-align: center;
+  }
+
+  .career-fair .cta-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .career-fair .btn-cta {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: var(--cf-primary);  /* ✅ CTA giữ màu xanh */
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1;
+    transition: transform 0.2s ease, background 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .career-fair .btn-cta:hover {
+    background: var(--blue);
+    transform: scale(1.04);
+  }
+
+  .career-fair .btn-cta:focus {
+    outline: 3px solid var(--cf-bg-soft);
+    outline-offset: 3px;
+  }
+
+  /* ========= Responsive ========= */
+  @media (max-width: 768px) {
+    .career-fair {
+      padding: 10px 16px;
+    }
+    .career-fair .career-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .career-fair .fair-card {
+      padding: 24px;
+    }
+    .career-fair .sub-info {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .career-fair .cta-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .career-fair .btn-cta {
+      width: auto;
+      text-align: center;
+    }
+  }
+</style>
+  
+<!-- ================= SECTION: CHÂN DUNG ỨNG VIÊN ================= -->
+<section id="candidate">
+  <div class="candidate-container">
+    <!-- LEFT: Image -->
+    <div class="candidate-image">
+      <img 
+        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/OPTION-2.1.jpg" 
+        alt="Chân dung thực tập viên tiềm năng">
+    </div>
+
+    <!-- RIGHT: Content -->
+    <div class="candidate-content">
+      <h2>“Chân dung” Thực tập viên Tiềm năng 2026</h2>
+      <ul class="candidate-list">
+        <li>Sinh viên đủ điều kiện tốt nghiệp trong năm 2026</li>
+        <li>Tận tâm – Nhiệt huyết – Khát khao phát triển bản thân</li>
+        <li>Định hướng sự nghiệp trong lĩnh vực Tài chính - Ngân hàng</li>
+        <li>Thời gian thực tập 01/2026 - 04/2026</li>
+        <li>Thực tập tối thiểu 6 buổi/tuần (linh hoạt theo lịch học)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA BUTTON -->
+  <div class="candidate-cta">
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-primary pulse"
+      aria-label="Nộp đơn ngay qua Google Form"
+    >
+      📝 Nộp đơn ngay
+    </a>
+  </div>
+</section>
+
+<!-- ================= CSS ================= -->
+<style>
+  #candidate {
+    background: #ffffff;
+    padding: 40px 20px 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 10; /* ✅ đảm bảo không bị lớp khác đè */
+  }
+
+  /* Layout Desktop */
+  #candidate .candidate-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #candidate .candidate-image {
+    text-align: center;
+  }
+
+  #candidate .candidate-image img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    border: 6px solid #005baa;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
+  }
+
+  #candidate .candidate-content {
+    text-align: left;
+  }
+
+  #candidate .candidate-content h2 {
+    font-weight: 800;
+    font-size: 32px;
+    color: #005baa;
+    margin-bottom: 16px;
+  }
+
+  #candidate .candidate-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #candidate .candidate-list li {
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 36px;
+    font-size: 16px;
+  }
+
+  #candidate .candidate-list li::before {
+    content: "⭐";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: #ff7a00;
+  }
+
+  /* CTA button */
+  #candidate .candidate-cta {
+    margin-top: 48px;
+    text-align: center;
+    position: relative;
+    z-index: 20; /* ✅ ưu tiên click */
+  }
+
+  #candidate .btn-primary {
+    font-size: 18px;
+    background: #ff7a00;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
+    display: inline-block;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+
+  #candidate .btn-primary:hover {
+    background: #e86b00;
+    transform: translateY(-3px);
+  }
+
+  #candidate .pulse {
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.6); }
+    70% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(255, 122, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 122, 0, 0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    #candidate .candidate-container {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    #candidate .candidate-content {
+      order: 1;
+      text-align: left;
+    }
+
+    #candidate .candidate-image {
+      order: 2;
+    }
+
+    #candidate .candidate-content h2 {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #candidate {
+      padding: 30px 16px 10px 16px;
+    }
+
+    #candidate .candidate-content h2 {
+      font-size: 24px;
+    }
+
+    #candidate .candidate-list li {
+      font-size: 14px;
+    }
+
+    #candidate .btn-primary {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+  }
+</style>
+
+<!-- ================= JS (Fallback mở link nếu có overlay) ================= -->
+<script>
+  (function () {
+    const cta = document.querySelector('#candidate .btn-primary');
+    if (!cta) return;
+
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform';
+    cta.addEventListener('click', function (e) {
+      // fallback để mở form trong tab mới
+      window.open(url, '_blank', 'noopener');
+    });
+  })();
+</script>
+
+<!-- ================= SECTION: LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= -->
+<section id="benefits" class="section" aria-label="Lợi ích khi tham gia chương trình">
+  <div class="container">
+    <h2 class="section-title">QUYỀN LỢI KHI THAM GIA CHƯƠNG TRÌNH</h2>
+
+    <div class="benefits-image-wrapper">
+      <img 
+        src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/benefits.jpg" 
+        alt="Quyền lợi khi tham gia chương trình"
+        class="benefits-image"
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= LỢI ÍCH KHI THAM GIA CHƯƠNG TRÌNH ================= */
+#benefits {
+  background: var(--bg-section);
+  padding-top: 0;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-transform: uppercase; /* 🆕 Viết in hoa toàn bộ tiêu đề */
+}
+
+.benefits-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  #benefits {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .benefits-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+</style>
+
+<!-- ================= SECTION: GIỚI THIỆU NGUỒN NHÂN LỰC ================= -->
+<section class="section about-hr" aria-label="Giới thiệu nguồn nhân lực Sacombank">
+  <h2 class="main-title">
+    SACOMBANK KHẲNG ĐỊNH VỊ THẾ NGUỒN NHÂN LỰC DẪN ĐẦU KHU VỰC
+  </h2>
+
+  <div class="two-col">
+    <div class="content">
+      <p>
+        <strong>Sacombank</strong> được vinh danh là “Nơi làm việc tốt nhất Châu Á 2025 – Best Companies to Work for in Asia 2025”. Đây là năm thứ 5 liên tiếp Ngân hàng đạt được danh hiệu danh giá này. Bên cạnh đó, Ngân hàng cũng vinh dự nằm trong Top 20 doanh nghiệp được trao tặng giải thưởng “Tech Empowerment Awards” – ghi nhận những thành tựu vượt bậc trong ứng dụng công nghệ số nhằm nâng cao hiệu quả quản trị nhân sự và cải thiện trải nghiệm làm việc của cán bộ nhân viên.
+      </p>
+
+      <p>
+        <strong>Sức mạnh đa thế hệ –</strong> Sacombank nơi tập hợp hơn 16.000 cán bộ nhân viên thuộc nhiều độ tuổi, với kinh nghiệm lãnh đạo dày dặn và tư duy đa dạng – từ đội ngũ lãnh đạo kỳ cựu đến những bạn trẻ Gen Z năng động, sáng tạo. Yếu tố này đã góp phần tạo nên một môi trường làm việc hiện đại, cởi mở và bền vững.
+      </p>
+
+      <p>
+        <strong>Chính sách nhân sự toàn diện –</strong> Sacombank luôn xác định con người là yếu tố cốt lõi trong chiến lược phát triển bền vững. Qua các năm, Ngân hàng không ngừng gia tăng chế độ phúc lợi để tạo động lực và gắn kết đội ngũ. Năm 2024, thu nhập bình quân của cán bộ nhân viên tăng hơn 13.5% so với năm trước; chính sách lương thưởng cạnh tranh và các chế độ phúc lợi toàn diện, bao gồm bảo hiểm nhân thọ, gói chăm sóc sức khỏe đặc quyền cho cán bộ nhân viên. Đây chính là nền móng để Sacombank tạo ra sự đột phá vững chắc cho sự nghiệp phát triển bền vững.
+      </p>
+
+      <p>
+        Tất cả những điều trên là minh chứng cho sự kiên định và nỗ lực bền bỉ trong chiến lược phát triển nguồn nhân lực, xây dựng môi trường làm việc hiện đại, nhân văn và bền vững.
+      </p>
+    </div>
+
+    <div class="media">
+      <img 
+        src="https://rmkcdn.successfactors.com/769c99d3/6204aa40-d6d6-42c5-93d1-5.jpg" 
+        alt="Hình ảnh minh họa môi trường làm việc tại Sacombank">
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= GIỚI THIỆU NGUỒN NHÂN LỰC ================= */
+.about-hr {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.about-hr .main-title {
+  font-size: 24px;                     /* ✅ giảm nhẹ để tránh rớt chữ */
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 24px;
+  line-height: 1.3;
+  text-transform: uppercase;           /* ✅ đồng bộ style chữ */
+}
+
+.about-hr .two-col {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-hr .content {
+  flex: 1 1 550px;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.about-hr .content p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.about-hr .media {
+  flex: 1 1 400px;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-hr .media img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 91, 170, 0.15);
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-hr {
+    padding: 30px 16px;
+  }
+
+  .about-hr .main-title {
+    font-size: 20px;                   /* ✅ giảm thêm trên mobile */
+    line-height: 1.4;
+  }
+
+  .about-hr .two-col {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-hr .content {
+    text-align: left;
+  }
+
+  .about-hr .media img {
+    max-width: 100%;
+  }
+}
+</style>
+
+<!-- ================= SECTION: GIẢI THƯỞNG NỔI BẬT ================= -->
+<!-- ================= SECTION: GIẢI THƯỞNG NỔI BẬT ================= -->
+<section id="achievements" class="section" aria-label="Giải thưởng nổi bật">
+  <div class="container">
+    <h2 class="section-title">Giải thưởng nổi bật</h2>
+
+    <div class="awards-wrapper">
+      <div class="awards-slider">
+        <!-- Giải thưởng 1 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/1.%20Top10%20Ngan%20hang%20ESG%20Viet%20Nam%20Xanh%202025%20(ESG%2010).png" alt="Top 10 Ngân hàng ESG Việt Nam Xanh 2025">
+          </div>
+          <p><b>Top 10 Ngân hàng ESG Việt Nam Xanh 2025</b></p>
+        </div>
+
+        <!-- Giải thưởng 2 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/2.%20Thuong%20hieu%20vang%20TP.HCM.png" alt="Thương hiệu vàng TP.HCM">
+          </div>
+          <p><b>Thương hiệu vàng TP.HCM</b></p>
+        </div>
+
+        <!-- Giải thưởng 3 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/3.%20Sao%20Khue%202025.png" alt="Sao Khuê 2025">
+          </div>
+          <p><b>Sao Khuê 2025</b></p>
+        </div>
+
+        <!-- Giải thưởng 4 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/4.%20Top10%20Ngan%20hang%20doi%20moi%20sang%20tao%20va%20kinh%20doanh%20hieu%20qua%202025%20(VIE%2010).png" alt="Top 10 Ngân hàng đổi mới sáng tạo và kinh doanh hiệu quả 2025">
+          </div>
+          <p><b>Top 10 Ngân hàng đổi mới sáng tạo và kinh doanh hiệu quả 2025</b></p>
+        </div>
+
+        <!-- Giải thưởng 5 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/6.%20Top10%20Thuong%20hieu%20tien%20phong%20doi%20moi%20sang%20tao.png" alt="Top 10 Thương hiệu tiên phong đổi mới sáng tạo">
+          </div>
+          <p><b>Top 10 Thương hiệu tiên phong đổi mới sáng tạo</b></p>
+        </div>
+
+        <!-- Giải thưởng 6 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/7.%20Top10%20Ngan%20hang%20TMCP%20Viet%20Nam%20uy%20tin%202025.png" alt="Top 10 Ngân hàng TMCP Việt Nam uy tín 2025">
+          </div>
+          <p><b>Top 10 Ngân hàng TMCP Việt Nam uy tín 2025</b></p>
+        </div>
+
+        <!-- Giải thưởng 7 -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/9.%20Ngan%20hang%20cung%20cap%20giai%20phap%20thanh%20toan%20tot%20nhat%20cho%20DN%20SMEs.png" alt="Ngân hàng cung cấp giải pháp thanh toán tốt nhất cho DN SMEs">
+          </div>
+          <p><b>Ngân hàng cung cấp giải pháp thanh toán tốt nhất cho DN SMEs</b></p>
+        </div>
+
+        <!-- Lặp lại để chạy slider mượt -->
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/1.%20Top10%20Ngan%20hang%20ESG%20Viet%20Nam%20Xanh%202025%20(ESG%2010).png" alt="">
+          </div>
+          <p><b>Top 10 Ngân hàng ESG Việt Nam Xanh 2025</b></p>
+        </div>
+        <div class="award-item">
+          <div class="award-img-box">
+            <img class="award-img" src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/2.%20Thuong%20hieu%20vang%20TP.HCM.png" alt="">
+          </div>
+          <p><b>Thương hiệu vàng TP.HCM</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= GIẢI THƯỞNG NỔI BẬT ================= */
+#achievements {
+  background: var(--bg-section);
+  padding-top: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+#achievements .section-title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 40px;
+  text-transform: uppercase; /* 🆕 viết in hoa toàn bộ */
+}
+
+/* Awards slider */
+.awards-wrapper {
+  overflow: hidden;
+}
+
+.awards-slider {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: awardsLoop 35s linear infinite;
+}
+
+.award-item {
+  flex: 0 0 260px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.award-img-box {
+  width: 220px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.award-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.award-item p {
+  color: var(--primary);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+@keyframes awardsLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  #achievements {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #achievements .section-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .award-item {
+    flex: 0 0 220px;
+    padding: 16px;
+  }
+
+  .award-img-box {
+    width: 200px;
+    height: 120px;
+  }
+}
+</style>
+
+
+
+</body></html>
