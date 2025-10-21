@@ -12,23 +12,16 @@
 <style>
   /* ================= ROOT & GLOBAL ================= */
   :root {
-    /* 🎨 Màu sắc */
     --primary: #005baa;
     --primary-dark: #004b8f;
     --accent: #ff7a00;
-
-    /* 🧱 Nền & bố cục */
     --bg: #f4fbff;
     --bg-section: #ffffff;
     --card: #ffffff;
     --glass: rgba(255, 255, 255, 0.75);
-
-    /* ✨ Kiểu dáng & spacing */
     --radius: 14px;
     --max-width: 1100px;
     --section-padding: 80px;
-
-    /* 🅰️ Font */
     --font-family: 'Montserrat', sans-serif;
   }
 
@@ -53,10 +46,11 @@
   .section {
     padding: var(--section-padding) 20px;
   }
-
   <style>
+ 
+  
   //* ================= HERO ================= */
-.hero {
+  .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -269,122 +263,117 @@
 
 <style>
   /* ================= FONT ================= */
-  * {
-    font-family: 'Montserrat', sans-serif;
-    color: #005baa; /* ✅ Áp dụng màu chữ chủ đạo mặc định */
-  }
-
   /* ================= ABOUT SECTION ================= */
-  #about {
-    padding: 40px 20px;
-    margin: 0;
-    background: #ffffff;
-    color: #005baa;  /* ✅ giữ màu chủ đạo */
-  }
+#about {
+  padding: 40px 20px;
+  margin: 0;
+  background: var(--bg-section);
+  color: var(--primary);
+}
 
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-video,
+.about-content {
+  flex: 1 1 450px;
+  min-width: 320px;
+}
+
+.about-video img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
+  display: block;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary);
+}
+
+.about-content p,
+.about-content ul li {
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.about-content ul {
+  padding-left: 20px;
+  margin: 0 0 8px;
+  list-style: none;
+}
+
+.about-content ul li {
+  margin-bottom: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
   .about-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .about-video,
   .about-content {
-    flex: 1 1 450px;
-    min-width: 320px;
+    text-align: left;
   }
 
   .about-video img {
-    width: 100%;
-    height: auto;
-    max-width: 450px;
-    max-height: 500px;
-    object-fit: contain;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 91, 170, 0.15);
-    display: block;
-    margin: 0 auto;
-  }
-
-  .about-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .about-content h2 {
-    margin: 0 0 10px;
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
-    color: #005baa; /* ✅ màu chủ đạo cho tiêu đề */
-  }
-
-  .about-content p,
-  .about-content ul li {
-    line-height: 1.25;
-    margin-bottom: 4px;
-    font-size: 16px;
-    color: #005baa; /* ✅ đồng bộ */
+    max-width: 100%;
+    max-height: none;
   }
 
   .about-content ul {
-    padding-left: 20px;
-    margin: 0 0 4px;
-    list-style: none;
+    padding-left: 0;
   }
 
   .about-content ul li {
-    margin-bottom: 4px;
+    list-style-position: inside;
   }
 
-  /* ================= RESPONSIVE ================= */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .about-content {
-      text-align: left;
-    }
-
-    .about-video img {
-      max-width: 100%;
-      max-height: none;
-    }
-
-    .about-content ul {
-      padding-left: 0;
-    }
-
-    .about-content ul li {
-      list-style-position: inside;
-    }
-
-    .about-content h2 {
-      font-size: 22px;
-    }
+  .about-content h2 {
+    font-size: 22px;
   }
+}
 
-  /* ================= ANIMATION ================= */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* ================= ANIMATION ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 
 
