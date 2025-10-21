@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Lịch trình Ngày hội tuyển dụng - Sacombank 2025</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
 <style>
 :root { --primary:#005baa; --accent:#ff6600; --light-bg:#f4f9ff; }
 *{ box-sizing:border-box; margin:0; padding:0; font-family:"Montserrat",sans-serif;}
@@ -29,8 +23,8 @@ select{ padding:10px 20px; border-radius:25px; border:1px solid #ddd; box-shadow
 footer{ margin-top:40px; font-size:.9rem; color:#555;}
 @media (max-width:768px){ .calendar{grid-template-columns:1fr;} header h1{font-size:1.6rem;} .event-card{padding:15px;} }
 </style>
-</head>
-<body>
+
+
 <header>
   <h1>LỊCH TRÌNH TỔ CHỨC NGÀY HỘI TUYỂN DỤNG<br>THỰC TẬP VIÊN TIỀM NĂNG 2026</h1>
   <div class="fair-card">
@@ -138,5 +132,3 @@ function renderEvents(filterRegion="all"){
 renderEvents();
 regionFilter.addEventListener("change", e => renderEvents(e.target.value));
 </script>
-</body>
-</html>
