@@ -27,20 +27,23 @@ body{
 }
 
 /* ===== HERO BANNER ===== */
+/* ================= HERO BANNER ================= */
 .hero-banner {
   width: 100%;
-  position: relative;
+  border-radius: 22px;                        /* ✅ bo góc nhẹ */
+  box-shadow: 0 8px 30px rgba(15, 60, 120, 0.06); /* ✅ đổ bóng nhẹ */
+  overflow: hidden;                          /* ✅ cắt gọn phần góc bo */
   background: #fff;
-  overflow: visible;               /* ❌ bỏ hidden để không cắt đáy */
+  position: relative;
 }
 
 .hero-banner img {
   width: 100%;
-  height: auto;                    /* ✅ giữ đúng tỉ lệ ảnh */
+  height: auto;          /* ✅ giữ đúng tỉ lệ ảnh */
   display: block;
-  object-fit: contain;             /* ✅ không cắt ảnh */
-  max-height: none;               /* ❌ bỏ giới hạn chiều cao */
+  object-fit: contain;   /* ✅ không cắt ảnh */
 }
+
 
 
 /* ===== HEADER ===== */
