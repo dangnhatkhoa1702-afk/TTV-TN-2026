@@ -1,20 +1,24 @@
+<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <style>
 :root { 
   --primary:#005baa; 
   --accent:#ff6600; 
-  --light-bg:#ffffff; /* ✅ đổi nền trắng */
+  --light-bg:#ffffff;
 }
+
 *{ 
   box-sizing:border-box; 
   margin:0; 
   padding:0; 
   font-family:"Montserrat",sans-serif;
 }
+
 html,body{ 
   overflow-x:hidden;
 }
+
 body{ 
   background:var(--light-bg); 
   color:#333; 
@@ -22,31 +26,35 @@ body{
   padding-bottom:100px;
 }
 
-/* ===== Banner ===== */
-.banner {
+/* ===== HERO BANNER ===== */
+.hero-banner {
   width: 100%;
-  max-height: 300px;
+  position: relative;
   overflow: hidden;
 }
-.banner img {
+.hero-banner img {
   width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
+  max-height: 500px;   /* ✅ giữ tỉ lệ đẹp */
 }
 
-/* ===== Header ===== */
+/* ===== HEADER ===== */
 header{ 
-  padding:40px 20px 10px;
+  background:#ffffff;
+  padding:50px 20px 30px;
+  text-align:center;
 }
 header h1{ 
   color:var(--primary); 
-  font-size:32px;   /* ✅ từ 2rem → 32px */
+  font-size:32px;   
   font-weight:800; 
   margin-bottom:25px; 
   line-height:1.4;
 }
 
-/* ===== Fair Card ===== */
+/* ===== FAIR CARD ===== */
 .fair-card{ 
   background:#fff; 
   border-radius:16px; 
@@ -65,7 +73,7 @@ header h1{
   color:var(--primary);
 }
 
-/* ===== Bộ lọc ===== */
+/* ===== BỘ LỌC ===== */
 .filter-bar{ 
   position:sticky; 
   top:0; 
@@ -85,7 +93,7 @@ select{
   cursor:pointer;
 }
 
-/* ===== Calendar ===== */
+/* ===== CALENDAR ===== */
 .calendar{ 
   display:grid; 
   grid-template-columns:repeat(2,minmax(300px,1fr)); 
@@ -115,25 +123,25 @@ select{
   font-weight:700; 
   color:var(--accent); 
   margin-bottom:10px; 
-  font-size:17px; /* ✅ từ 1.05rem → 17px */
+  font-size:17px;
   display:flex; 
   align-items:center; 
   gap:8px;
 }
 .event-title::before{ 
   content:"🎓"; 
-  font-size:19px; /* ✅ từ 1.2rem → 19px */
+  font-size:19px;
 }
 .event-line{ 
   margin:6px 0; 
-  font-size:15px; /* ✅ từ .95rem → 15px */
+  font-size:15px;
 }
 .event-line strong{ 
   color:var(--primary); 
   font-weight:600;
 }
 
-/* ===== Apply Button ===== */
+/* ===== APPLY BUTTON ===== */
 .apply-btn{ 
   display:inline-block; 
   margin-top:30px; 
@@ -151,26 +159,28 @@ select{
   transform:translateY(-3px);
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER ===== */
 footer{ 
   margin-top:40px; 
-  font-size:14px;  /* ✅ từ .9rem → 14px */
+  font-size:14px;  
   color:#555;
 }
 
-/* ===== Responsive ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width:768px){
-  .calendar{grid-template-columns:1fr;}
-  header h1{font-size:26px;} /* ✅ từ 1.6rem → 26px */
-  .event-card{padding:15px;}
+  .hero-banner img { max-height:300px; }
+  .calendar{ grid-template-columns:1fr; }
+  header h1{ font-size:26px; }
+  .event-card{ padding:15px; }
 }
 </style>
 
-<!-- Banner -->
-<div class="banner">
+<!-- BANNER -->
+<section class="hero-banner">
   <img src="https://github.com/dangnhatkhoa1702-afk/TTV-TN-2026/blob/main/Banner%20(2).jpg?raw=true" alt="Banner TTVTN 2026">
-</div>
+</section>
 
+<!-- HEADER -->
 <header>
   <h1>LỊCH TRÌNH TỔ CHỨC NGÀY HỘI TUYỂN DỤNG<br>THỰC TẬP VIÊN TIỀM NĂNG 2026</h1>
   <div class="fair-card">
@@ -179,7 +189,7 @@ footer{
   </div>
 </header>
 
-<!-- Bộ lọc -->
+<!-- BỘ LỌC -->
 <div class="filter-bar">
   <select id="regionFilter">
     <option value="all">🌏 Toàn quốc</option>
@@ -192,10 +202,12 @@ footer{
   </select>
 </div>
 
+<!-- CALENDAR -->
 <section>
   <div class="calendar" id="calendar"></div>
 </section>
 
+<!-- APPLY -->
 <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" class="apply-btn" target="_blank">
   NỘP ĐƠN NGAY
 </a>
