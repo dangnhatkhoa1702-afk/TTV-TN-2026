@@ -145,22 +145,26 @@ select{
 }
 
 /* ===== APPLY BUTTON ===== */
-.apply-btn{ 
-  display:inline-block; 
-  margin-top:30px; 
-  background:var(--primary); 
-  color:#fff; 
-  padding:12px 28px; 
-  font-weight:600; 
-  border-radius:50px; 
-  text-decoration:none; 
-  box-shadow:0 6px 12px rgba(0,91,170,.3); 
-  transition:.3s ease;
+.apply-btn { 
+  display: inline-block; 
+  margin-top: 30px; 
+  background: var(--primary); 
+  color: #fff !important;         /* ✅ khóa màu trắng cho chữ */
+  padding: 12px 28px 16px;        /* ✅ tăng padding bottom để nút cao hơn */
+  font-weight: 600; 
+  border-radius: 50px; 
+  text-decoration: none !important; /* ✅ tránh bị SAP thêm gạch chân */
+  box-shadow: 0 6px 12px rgba(0, 91, 170, .3); 
+  transition: .3s ease;
 }
-.apply-btn:hover{ 
-  background:#024a89; 
-  transform:translateY(-3px);
+
+.apply-btn:hover { 
+  background: #024a89; 
+  color: #fff;            
+  -webkit-text-fill-color: #fff;
+  transform: translateY(-3px);
 }
+
 
 /* ===== FOOTER ===== */
 footer{ 
